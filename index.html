@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.fityesz.hu/images/assets/fityesz.png">
+    <title>Fityesz - Az igazság</title>
+    <style>
+		* { box-sizing: border-box; }
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: #f1f1f1; 
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #3c4043;
+			border-radius: 5px;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: #1a73e8;
+		}
+
+		* {
+			scrollbar-width: thin;
+			scrollbar-color: #aaaaaa #eeeeee;
+		}
+		body {
+			background-color: #121212;
+			background-image: 
+			linear-gradient(45deg, #1a1a1a 25%, transparent 25%), 
+			linear-gradient(-45deg, #1a1a1a 25%, transparent 25%), 
+			linear-gradient(45deg, transparent 75%, #1a1a1a 75%), 
+			linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+			background-size: 20px 20px;
+			background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+		.container {
+			background-color: #ffffff;
+			width: 100%;
+			max-width: 450px; 
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			border-radius: 25px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+			margin: 20px 0;
+			overflow: hidden;
+		}
+
+		.content {
+			padding: 20px;
+			line-height: 1.6;
+		}
+
+		.header-image {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		h2 {
+			color: #d32f2f;
+			font-size: 1.4em;
+			margin-top: 25px;
+			line-height: 1.2;
+		}
+
+		p {
+			margin-bottom: 15px;
+			font-size: 1.05em;
+		}
+		.quote {
+			font-weight: bold;
+			font-style: italic;
+			color: #555;
+			border-left: 4px solid #ff6600;
+			padding-left: 10px;
+			margin: 20px 0;
+		}
+		.orange-divider {
+			border: none;
+			border-bottom: 3px solid #ff6600;
+			margin: 30px 0;
+			width: 100%;
+		}
+		.highlight {
+			font-weight: bold;
+			color: #000;
+		}
+
+		.list-item {
+			margin-bottom: 12px;
+			display: flex;
+			align-items: flex-start;
+		}
+
+		.orange-icon {
+			margin-right: 10px;
+			flex-shrink: 0;
+		}
+
+		#theme-toggle {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			background-color: #121212;
+			color: #ffffff;
+			border: none;
+			border-radius: 50%;
+			width: 45px;
+			height: 45px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+			transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s ease;
+			z-index: 1000;
+		}
+
+		#theme-toggle:hover {
+			transform: scale(1.1);
+		}
+
+		.container, p, h2, .highlight, .quote, body {
+			transition: background-color 0.4s ease, color 0.4s ease;
+		}
+
+		body.dark-mode .container {
+			background-color: #1e1e1e;
+			color: #e0e0e0;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+		}
+
+		body.dark-mode p {
+			color: #cccccc;
+		}
+
+		body.dark-mode .highlight {
+			color: #ffffff;
+		}
+
+		body.dark-mode .quote {
+			color: #bbbbbb;
+			border-left: 4px solid #cc5200;
+		}
+
+		body.dark-mode #theme-toggle {
+			background-color: #ffffff;
+			color: #121212;
+			box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+		}
+		@media (max-width: 450px) {
+			.container {
+				clip-path: none;
+				margin: 0;
+				filter: none;
+			}
+			body {
+				background-image: none;
+				background-color: #ffffff;
+			}
+			body.dark-mode {
+				background-color: #121212;
+			}
+		}
+    </style>
+</head>
+<body>
+<button id="theme-toggle" aria-label="Sötét mód kapcsoló">
+    <svg id="theme-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+</button>
+<div class="container">
+    <img src="https://static.fityesz.hu/images/assets/fityesz-megfizetnek.png" alt="Fityesz kép" class="header-image">
+    <div class="content">
+        <p>Miért Fityesz? Mert ez már nem kormányzás, csak játék a sorsunkkal.</p>
+        <div class="quote">Fidesz: "Megvédjük a rezsicsökkentést."</div>
+        <p><span class="highlight">Fityesz:</span> Európa legmagasabb inflációjával és világrekord ÁFÁ-val üríti ki a zsebedet.</p>
+        <div class="quote">Fidesz: "Brüsszelt meg kell állítani."</div>
+        <p><span class="highlight">Fityesz:</span> Elszigetelt minket szövetségeseinktől, miközben az uniós milliárdok a haverok zsebében landolnak.</p>
+        <p>A Fidesz egy párt neve volt. A Fityesz egy bukott rendszer gúnyneve, ahol a kiváltságos kevesek jóléte a többség nyomorán épül.</p>
+        <p>Itt az idő, hogy a félelem helyett a reményt válasszuk! Ne hagyjuk, hogy a propaganda elfedje a szétmálló vakolatot a kórházak falán. Magyarország nem a Fityeszé, hanem a magyar embereké. Építsünk együtt egy modern, európai és tisztességes hazát!</p>
+		<div class="orange-divider"></div>
+        <h2>Milyen ügyekhez van köze van a Fityesznek, amelyek tönkretették az országot?</h2>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>Novák Katalin kegyelmi döntése és lemondása</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>Lölő-jelenség a multimilliárdos Mészáros Lőrinccel</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>Völner-Schadl-botrány</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>Elios-ügy Tiborcz Istvánnal</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>Szájer-ügy a brüsszeli ereszen</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>Ellopott magánnyugdíjak</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>Pegasus-ügy izraeli kémszoftverrel</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>Propaganda, különösen a Megafon</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>46 ezer halott a Covid idején</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>Oktatás és egészségügy elhanyagoltsága</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>A lombkoronasétány jelképes botránya</b></span></div>
+        <div class="list-item"><span class="orange-icon">🍊</span> <span><b>Közvagyon alapítványokba való átmentése</b></span></div>
+		<div class="orange-divider"></div>
+    </div>
+</div>
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+        } else {
+            themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+        }
+    });
+</script>
+</body>
+</html>
