@@ -5,14 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="https://static.fityesz.hu/images/assets/fityesz.png">
 	<title>Fityesz - Az igazság</title>
-	<!-- Embed system -->
 	<meta name="description" content="A Fideszt már nem lehet a régi, 'fiatal demokrata' módon nevezni. Már inkább Fityesznek felel meg, mint egy működő állam rendszerének.">
 	<meta name="theme-color" content="#ff6600">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Fityesz – A valóság">
 	<meta property="og:url" content="https://fityesz.hu">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Fityesz – A valóság">
 	<meta property="og:description" content="A Fideszt már nem lehet a régi, 'fiatal demokrata' módon nevezni. Már inkább Fityesznek felel meg, mint egy működő állam rendszerének.">
 	<meta property="og:image" content="https://static.fityesz.hu/images/assets/fityesz-megfizetnek.png">
 	<meta name="twitter:card" content="summary_large_image">
@@ -21,345 +18,223 @@
 	<meta name="twitter:title" content="Fityesz – A valóság">
 	<meta name="twitter:description" content="A Fideszt már nem lehet a régi, 'fiatal demokrata' módon nevezni. Már inkább Fityesznek felel meg, mint egy működő állam rendszerének.">
 	<meta name="twitter:image" content="https://static.fityesz.hu/images/assets/fityesz-megfizetnek.png">
-
 	<style>
-		* { box-sizing: border-box; }
-		::-webkit-scrollbar {
-			width: 10px;
-		}
-
-		::-webkit-scrollbar-track {
-			background: #f1f1f1; 
-		}
-
-		::-webkit-scrollbar-thumb {
-			background: #3c4043;
-			border-radius: 5px;
-		}
-
-		::-webkit-scrollbar-thumb:hover {
-			background: #1a73e8;
-		}
-
 		* {
-			scrollbar-width: thin;
-			scrollbar-color: #aaaaaa #eeeeee;
+		  box-sizing: border-box;
+		  scrollbar-width: thin;
+		  scrollbar-color: #aaa #eee;
 		}
+		::-webkit-scrollbar { width: 10px; }
+		::-webkit-scrollbar-track { background: #f1f1f1; }
+		::-webkit-scrollbar-thumb { background: #3c4043; border-radius: 5px; }
+		::-webkit-scrollbar-thumb:hover { background: #1a73e8; }
 		body {
-			background-color: #121212;
-			background-image: 
-			linear-gradient(45deg, #1a1a1a 25%, transparent 25%), 
-			linear-gradient(-45deg, #1a1a1a 25%, transparent 25%), 
-			linear-gradient(45deg, transparent 75%, #1a1a1a 75%), 
+		  background-color: #121212;
+		  background-image:
+			linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
+			linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
+			linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
 			linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
-			background-size: 20px 20px;
-			background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-			margin: 0;
-			padding: 0;
-			display: flex;
-			justify-content: center;
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		  background-size: 20px 20px;
+		  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+		  margin: 0;
+		  padding: 0;
+		  display: flex;
+		  justify-content: center;
+		  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		}
 		.container {
-			background-color: #ffffff;
-			width: 100%;
-			max-width: 650px;
-			min-height: 100vh;
-			display: flex;
-			flex-direction: column;
-			border-radius: 25px;
-			box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-			margin: 20px auto;
-			overflow: hidden;
+		  background-color: #fff;
+		  width: 100%;
+		  max-width: 650px;
+		  min-height: 100vh;
+		  display: flex;
+		  flex-direction: column;
+		  border-radius: 25px;
+		  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+		  margin: 20px auto;
+		  overflow: hidden;
 		}
-
-		.content {
-			padding: 20px;
-			line-height: 1.6;
-		}
-
-		.header-image {
-			width: 100%;
-			height: auto;
-			display: block;
-		}
-
-		.fityesz-logo {
-			  display: block;
-			  margin: 0 auto;
-		}
-
-		h2 {
-			color: #d32f2f;
-			font-size: 1.4em;
-			margin-top: 25px;
-			line-height: 1.2;
-		}
-
-		p {
-			margin-bottom: 15px;
-			font-size: 1.05em;
-		}
+		.content { padding: 20px; line-height: 1.6; }
+		.header-image { width: 100%; height: auto; display: block; }
+		.fityesz-logo { display: block; margin: 0 auto; }
+		.full-width { width: 100%; }
+		h2 { color: #d32f2f; font-size: 1.4em; margin-top: 25px; line-height: 1.2; }
+		p { margin-bottom: 15px; font-size: 1.05em; }
 		.quote {
-			font-weight: bold;
-			font-style: italic;
-			color: #555;
-			border-left: 4px solid #ff6600;
-			padding-left: 10px;
-			margin: 20px 0;
+		  font-weight: bold;
+		  font-style: italic;
+		  color: #555;
+		  border-left: 4px solid #ff6600;
+		  padding-left: 10px;
+		  margin: 20px 0;
 		}
-		.orange-divider {
-			border: none;
-			border-bottom: 3px solid #ff6600;
-			margin: 30px 0;
-			width: 100%;
-		}
-		.highlight {
-			font-weight: bold;
-			color: #000;
-		}
-
-		.list-item {
-			margin-bottom: 12px;
-			display: flex;
-			align-items: flex-start;
-		}
-
-		.orange-icon {
-			margin-right: 10px;
-			flex-shrink: 0;
-		}
-
+		.orange-divider { border: none; border-bottom: 3px solid #ff6600; margin: 30px 0; width: 100%; }
+		.highlight { font-weight: bold; color: #000; }
+		.list-item { margin-bottom: 12px; display: flex; align-items: flex-start; }
+		.orange-icon { margin-right: 10px; flex-shrink: 0; }
 		#theme-toggle {
-			position: fixed;
-			top: 20px;
-			right: 20px;
-			background-color: #121212;
-			color: #ffffff;
-			border: none;
-			border-radius: 50%;
-			width: 45px;
-			height: 45px;
-			cursor: pointer;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-			transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s ease;
-			z-index: 1000;
+		  position: fixed;
+		  top: 20px;
+		  right: 20px;
+		  background-color: #121212;
+		  color: #fff;
+		  border: none;
+		  border-radius: 50%;
+		  width: 45px;
+		  height: 45px;
+		  cursor: pointer;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  box-shadow: 0 4px 15px rgba(0,0,0,.2);
+		  transition: background-color .4s ease, color .4s ease, transform .2s ease;
+		  z-index: 1000;
 		}
-
-		#theme-toggle:hover {
-			transform: scale(1.1);
-		}
-
-		.container, p, h2, .highlight, .quote, body {
-			transition: background-color 0.4s ease, color 0.4s ease;
-		}
-
-		body.dark-mode .container {
-			background-color: #000000;
-			color: #e0e0e0;
-			box-shadow: 0 10px 30px rgba(0,0,0,1);
-		}
-
-		body.dark-mode p {
-			color: #cccccc;
-		}
-
-		body.dark-mode .highlight {
-			color: #ffffff;
-		}
-
-		body.dark-mode .quote {
-			color: #bbbbbb;
-			border-left: 4px solid #cc5200;
-		}
-
-		body.dark-mode #theme-toggle {
-			background-color: #ffffff;
-			color: #121212;
-			box-shadow: 0 4px 15px rgba(255,255,255,0.2);
-		}
+		#theme-toggle:hover { transform: scale(1.1); }
+		.container, p, h2, .highlight, .quote, body { transition: background-color .4s ease, color .4s ease; }
+		body.dark-mode .container { background-color: #000; color: #e0e0e0; box-shadow: 0 10px 30px rgba(0,0,0,1); }
+		body.dark-mode p { color: #ccc; }
+		body.dark-mode .highlight { color: #fff; }
+		body.dark-mode .quote { color: #bbb; border-left-color: #cc5200; }
+		body.dark-mode #theme-toggle { background-color: #fff; color: #121212; box-shadow: 0 4px 15px rgba(255,255,255,.2); }
 		@media (max-width: 450px) {
-			.container {
-				border-radius: 0;
-				margin: 0;
-				max-width: 100%;
-				box-shadow: none;
-			}
-			
-			body {
-				background-color: #121212;
-				background-image: 
-				linear-gradient(45deg, #1a1a1a 25%, transparent 25%), 
-				linear-gradient(-45deg, #1a1a1a 25%, transparent 25%), 
-				linear-gradient(45deg, transparent 75%, #1a1a1a 75%), 
-				linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
-			}
-
-			body.dark-mode {
-				background-color: #000000;
-			}
+		  .container { border-radius: 0; margin: 0; max-width: 100%; box-shadow: none; }
+		  body.dark-mode { background-color: #000; }
 		}
 		.more-btn {
-			background: none;
-			border: none;
-			color: #ff6600;
-			cursor: pointer;
-			font-size: 0.9em;
-			padding: 0 5px;
-			display: inline-flex;
-			align-items: center;
-			text-decoration: none !important;
-			outline: none;
-			transition: color 0.3s ease, transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
-			-webkit-tap-highlight-color: transparent;
+		  background: none;
+		  border: none;
+		  color: #ff6600;
+		  cursor: pointer;
+		  font-size: .9em;
+		  padding: 0 5px;
+		  display: inline-flex;
+		  align-items: center;
+		  text-decoration: none !important;
+		  outline: none;
+		  transition: color .3s ease, transform .2s cubic-bezier(.25,.8,.25,1);
+		  -webkit-tap-highlight-color: transparent;
 		}
-
-		.more-btn:hover {
-			text-decoration: none !important;
-			color: #ff8533;
-		}
-
-		.more-btn:active {
-			transform: scale(1.05);
-			color: #e65c00;
-			transition: transform 0.1s;
-		}
-
+		.more-btn:hover { color: #ff8533; }
+		.more-btn:active { transform: scale(1.05); color: #e65c00; transition: transform .1s; }
 		.details-content {
-			max-height: 0;
-			overflow: hidden;
-			transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
-			font-size: 0.95em;
-			color: #444;
-			background: rgba(255, 102, 0, 0.03);
-			border-left: 3px solid #ff6600;
-			margin-top: 0;
-			padding: 0 15px;
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: max-height .5s cubic-bezier(0,1,0,1), padding .3s ease;
+		  font-size: .95em;
+		  color: #444;
+		  background: rgba(255,102,0,.03);
+		  border-left: 3px solid #ff6600;
+		  margin-top: 0;
+		  padding: 0 15px;
 		}
-
-		body.dark-mode .details-content {
-			color: #bbb;
-			background: rgba(255, 102, 0, 0.05);
-			border-left-color: #cc5200;
-		}
-
+		body.dark-mode .details-content { color: #bbb; background: rgba(255,102,0,.05); border-left-color: #cc5200; }
 		.details-content.open {
-			max-height: 500px;
-			margin-top: 12px;
-			padding: 10px 15px;
-			transition: max-height 0.8s ease-in-out, padding 0.3s ease;
+		  max-height: 500px;
+		  margin-top: 12px;
+		  padding: 10px 15px;
+		  transition: max-height .8s ease-in-out, padding .3s ease;
 		}
-
-		.arrow {
-			display: inline-block;
-			margin-left: 6px;
-			font-size: 0.8em;
-			transition: transform 0.3s ease;
-		}
-
-		.open-state .arrow {
-			transform: rotate(180deg);
-		}
-
+		.arrow { display: inline-block; margin-left: 6px; font-size: .8em; }
 		.countdown-banner {
-			background: linear-gradient(135deg, rgba(255, 102, 0, 0.1), rgba(255, 102, 0, 0.03));
-			border-left: 4px solid #ff6600;
-			border-radius: 8px;
-			padding: 15px 20px;
-			margin-bottom: 25px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-			box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-			transition: all 0.4s ease;
+		  background: linear-gradient(135deg, rgba(255,102,0,.1), rgba(255,102,0,.03));
+		  border-left: 4px solid #ff6600;
+		  border-radius: 8px;
+		  padding: 15px 20px;
+		  margin-bottom: 25px;
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  text-align: center;
+		  box-shadow: 0 4px 10px rgba(0,0,0,.03);
+		  transition: all .4s ease;
 		}
-
 		body.dark-mode .countdown-banner {
-			background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.05));
-			box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-			border-left-color: #cc5200;
+		  background: linear-gradient(135deg, rgba(255,102,0,.15), rgba(255,102,0,.05));
+		  box-shadow: 0 4px 10px rgba(0,0,0,.3);
+		  border-left-color: #cc5200;
 		}
-
 		.countdown-text {
-			font-size: 1.05em;
-			color: #555;
-			font-weight: 600;
-			text-transform: uppercase;
-			letter-spacing: 0.5px;
-			transition: color 0.4s ease;
+		  font-size: 1.05em;
+		  color: #555;
+		  font-weight: 600;
+		  text-transform: uppercase;
+		  letter-spacing: .5px;
+		  transition: color .4s ease;
 		}
-
-		body.dark-mode .countdown-text {
-			color: #bbb;
-		}
-
+		body.dark-mode .countdown-text { color: #bbb; }
 		.countdown-timer {
-			font-size: 1.2em;
-			font-weight: 800;
-			color: #ff6600;
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-			letter-spacing: 0.5px;
-			text-shadow: 0px 1px 2px rgba(255, 102, 0, 0.2);
+		  font-size: 1.2em;
+		  font-weight: 800;
+		  color: #ff6600;
+		  letter-spacing: .5px;
+		  text-shadow: 0 1px 2px rgba(255,102,0,.2);
 		}
-
-		body.dark-mode .countdown-timer {
-			color: #ff8533;
-			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-		}
+		body.dark-mode .countdown-timer { color: #ff8533; text-shadow: 0 2px 5px rgba(0,0,0,.5); }
 	</style>
 </head>
 <body>
 <button id="theme-toggle" aria-label="Sötét mód kapcsoló">
-    <svg id="theme-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-    </svg>
+  <svg id="theme-icon" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
 </button>
 <div class="container">
 	<img src="https://static.fityesz.hu/images/assets/fityesz-megfizetnek.png" alt="Fityesz kép" class="header-image">
 	<div class="content">
-		<div class="countdown-banner">
-			<div class="countdown-text">Már csak ennyi idő van vissza az április 12-i választásokig:</div>
-			<div id="timer" class="countdown-timer">0 nap, 0 óra, 0 perc, 0 másodperc</div>
-			<div class="countdown-text">SZAVAZZ A RENDSZERVÁLTÁSRA!<br>ERRE CSAK A LEGESÉLYESEBB TISZA PÁRT KÉPES!</div>
-		</div>
-		<p><b>A Fiatal Demokraták Szövetsége már nem az a pártrendszer, amiben most az épeszű honfitársaink megbíznának. 16 év után már mindannyian tudjuk: ennek a vergődő hatalomnak mennie kell.</b></p>
-		<p>Ezért nevezhetnénk ezt a rendszert már inkább Fityesznek, reflektálva az összeomló magyar közszolgáltatásokra és a régóta tartó korrupcióra.</p>
-		<p>De akkor miért is a Fityesz? Mert ez már nem kormányzás, hanem csak játék a sorsunkkal.</p>
-		<div class="quote">Fidesz: "Megvédjük a rezsicsökkentést."</div>
-		<p><span class="highlight">Fityesz:</span> Európa legmagasabb inflációjával és világrekord ÁFÁ-jával üríti ki a zsebedet.</p>
-		<div class="quote">Fidesz: "Brüsszelt meg kell állítani."</div>
-		<p><span class="highlight">Fityesz:</span> Elszigetelt minket szövetségeseinktől, miközben az uniós milliárdok a haverok zsebében landolnak.</p>
-		<p>A Fidesz egy párt neve volt. A Fityesz egy bukott rendszer gúnyneve, ahol a kiváltságos kevesek jóléte a többség nyomorán épül.</p>
-		<p>Itt az idő, hogy a félelem helyett a reményt válasszuk! Ne hagyjuk, hogy a propaganda elfedje a szétmálló vakolatot a kórházak falán. Magyarország nem a Fityeszé, hanem a magyar embereké. Építsünk együtt egy modern, európai és tisztességes hazát!</p>
-		<div class="orange-divider"></div>
-		<h2>Milyen ügyekhez van köze van a Fityesznek, amelyekkel tönkretették az országot?</h2>
-		<div class="list-item"><span class="orange-icon">🍊</span> <div style="width: 100%;"><span><b>Novák Katalin kegyelmi döntése és lemondása</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">2024 eléjén robbant ki a kegyelmi ügy, ami szerint <b>Novák Katalin, volt köztársasági elnök újév alkalmával kegyelmet adott egy kegyetlen pedofil segítőjének, Kónya Endrének</b>.<br>A vádak szerint 2004 és 2016 között a bicskei gyermekotthon igazgatója, <b>Vásárhelyi János 10 kiskorút kényszerített orális szexre, különböző engedményekért cserébe</b>.<br>Miután az egyik áldozat öngyilkosságot követett el, az egyik bántalmazott fiú 2016-ban jelezte a gyermekvédelmi gyámjának a problémát, ekkor rögtön átköltöztették egy másik gyermekotthonba, az igazgatót pedig felmentették.<br>Novák Katalin ugyan lemondott, de bocsánatot azóta se kért senki. Ez körülbelül 225.000 fideszes szavazót tántorított el.</div></div></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <div style="width: 100%;"><span><b>A gödi Samsung halálgyár</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">A Fityesz-kormány nemcsak asszisztál ahhoz a gödi környezetszennyezéshez, amely már évek óta a korrupció révén szóba sem került, hanem még le is járatja magát vele a brutális hazugságaival. Szijjártó Péter külügyminiszter hiába állította, hogy 'minden rendben van és nem tudott ilyenekről', a <b>kiszivárgott titkosszolgálati jelentésekből kiderült: a kormány pontosan tudott a Samsung SDI gyár környékén mért brutális légszennyezésről és a talajvízbe került rákkeltő anyagokról</b>.<br>Szijjártó egyszerűen <b>letagadta a tényeket, és a gazdasági érdekeket a magyar emberek egészsége elé helyezte</b>.<br>Majd Orbán Viktor miniszterelnök a gödiek jogos félelmét és a mérgezésről szóló híreket egyszerűen <b>"kamuügynek" nevezte</b>.<br>Azóta azonban független mérések és videófelvételek igazolták, hogy a <b>gyár folyamatosan szennyezi a környezetet</b>, a hatóságok pedig nevetséges büntetésekkel vagy titkosítással próbálják menteni a menthetetlent.<br>Miközben a Fidesz-elit milliárdokat kaszál az akkumulátor-bizniszen, a gödi családoknak a magzatkárosító oldószerekkel és a mindent elnyomó zajjal kell együtt élniük.</div></div></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Ügyészségi adatok módosítása</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <div style="width: 100%;"><span><b>Lázár János cigányellenes mondatai</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">Lázár János nem csak a MÁV és a közutak lerohasztásáról ismert, hanem a <b>szélsőséges, rasszista megnyílvánulásáról is, miszerint a migránsok helyett Magyarország 'belső tartalékának' kell a szaros WC-ket takarítania, akik a roma emberek</b>.<br>Ha te egy roma állampolgár vagy, akkor a fideszes közlekedési miniszter szerint te csak a WC-k takarításához értesz és neked azt kell csinálnod.</div></div></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>A MÁV és a közutak teljes lerohaztása</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>A hódmezővásárhelyi rendőrkapitány öngyilkossága</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <div style="width: 100%;"><span><b>Szájer-ügy a brüsszeli ereszen</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">2020. november 27-én Brüsszelben a rendőrség felszámolt egy 25 fős meleg szexpartit Covidos előírások megszegése miatt. <b>Szájer József, volt fideszes politikus jelen volt a partin és a rendőrség elől megpróbált elszökni</b> úgy, hogy egy ereszen lecsúszik. Ez nem sikerült és elkapták őt. A nála lévő táskában <b>rengeteg tablettás (ecstasy) drog volt nála</b>.<br>Ez azért érdekes, mert <b>pont Szájer József volt, aki rengeteg melegellenes törvényjavaslatnál szavazott igennel</b>. Ironikus, nemde?</div></div></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Kaleta pedofil ügy</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Lölő-jelenség a multimilliárdos Mészáros Lőrinccel</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Borkai ügy</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <div style="width: 100%;"><span><b>Az MNB 650 milliárd forintos kirablása</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">A Magyar Nemzeti Bank körüli botrány a modern magyar gazdaságtörténet egyik leggátlástalanabb közpénz-szivattyúja. <b>Matolcsy György vezetésével a jegybank több mint 260 milliárd forintnyi (később 650 milliárdra duzzadó) közvagyont játszott át saját alapítványaiba, amelyeket a NER-elit felerősödésére pazaroltak</b>. A kormány nevetséges jogi ütközésekkel próbálta elhitetni, hogy ez a hatalmas összeg az alapítványokba kerülve 'elveszítette közpénz jellegét'.<br>A gyakorlatban ez a Matolcsy-klán és a baráti körök (például Szemerey Tamás és a jegybankelnök fia, Matolcsy Ádám üzleti körei) gátlástalan finanszírozását jelentette.<br>A pénzt <b>luxusingatlanokra,túlárazott műkincsekre és kormányzati propaganda finanszírozására költötték, miközben a magyar lakosság a rekordméretű forintromlást nyögte</b>.<br>Ez a művelet nem más, mint a nemzeti vagyon módszeres, intézményesített magánzsebekbe vándoroltatása a függetlenség álcája mögé bújva. <b>A jegybanki profit nem a költségvetést vagy az országot gazdagította, hanem a hatalmi elit oligarchikus építkezését szolgálta</b>.</div></div></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>A KATA eltörlése</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Völner-Schadl-botrány</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Elios-ügy Tiborcz Istvánnal</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Túlzottan oroszpárti kül- és belpolitika</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Az ország eladósítása orosz és kínai hitelekkel</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Hazugságok a nem létező amerikai védőpajzsról</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Hazugságok a Barátság Kőolajvezeték állapotáról</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Ellopott magánnyugdíjak</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Gyurcsány Ferenc elszámoltatásának a hiánya</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <div style="width: 100%;"><span><b>Pegasus-ügy izraeli kémszoftverrel</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">A kormány szerint mi egy jogállamban élünk és szabad mindenki, mégis kiderült, hogy egyes újságírók, aktivisták és még ellenzéki politikusok telefonjaikon izraeli kémszoftverek futnak/futottak. Ki tudja, lehet hogy az Ön vagy akár a családtagja eszközén is futhat hasonló kémszoftver!</div></div></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>A milliárdokból felhúzott, propagandacélokra használt közmédia</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <div style="width: 100%;"><span><b>48 ezer halott a Covid idején</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">A 2020-as világjárvány alatt Magyarországon halt meg a legtöbb ember a lakosság szerint. Ez is tükrözi a gyenge egészségügyünket és az inkompetens veszélyhelyzeti kormányzást.<br><br>
+	<div class="countdown-banner">
+	<div class="countdown-text">Már csak ennyi idő van vissza az április 12-i választásokig:</div>
+	<div id="timer" class="countdown-timer">0 nap, 0 óra, 0 perc, 0 másodperc</div>
+	<div class="countdown-text">SZAVAZZ A RENDSZERVÁLTÁSRA!<br>ERRE CSAK A LEGESÉLYESEBB TISZA PÁRT KÉPES!</div>
+	</div>
+	<p><b>A Fiatal Demokraták Szövetsége már nem az a pártrendszer, amiben most az épeszű honfitársaink megbíznának. 16 év után már mindannyian tudjuk: ennek a vergődő hatalomnak mennie kell.</b></p>
+	<p>Ezért nevezhetnénk ezt a rendszert már inkább Fityesznek, reflektálva az összeomló magyar közszolgáltatásokra és a régóta tartó korrupcióra.</p>
+	<p>De akkor miért is a Fityesz? Mert ez már nem kormányzás, hanem csak játék a sorsunkkal.</p>
+	<div class="quote">Fidesz: "Megvédjük a rezsicsökkentést."</div>
+	<p><span class="highlight">Fityesz:</span> Európa legmagasabb inflációjával és világrekord ÁFÁ-jával üríti ki a zsebedet.</p>
+	<div class="quote">Fidesz: "Brüsszelt meg kell állítani."</div>
+	<p><span class="highlight">Fityesz:</span> Elszigetelt minket szövetségeseinktől, miközben az uniós milliárdok a haverok zsebében landolnak.</p>
+	<p>A Fidesz egy párt neve volt. A Fityesz egy bukott rendszer gúnyneve, ahol a kiváltságos kevesek jóléte a többség nyomorán épül.</p>
+	<p>Itt az idő, hogy a félelem helyett a reményt válasszuk! Ne hagyjuk, hogy a propaganda elfedje a szétmálló vakolatot a kórházak falán. Magyarország nem a Fityeszé, hanem a magyar embereké. Építsünk együtt egy modern, európai és tisztességes hazát!</p>
+	<div class="orange-divider"></div>
+	<h2>Milyen ügyekhez van köze van a Fityesznek, amelyekkel tönkretették az országot?</h2>
+	<div class="list-item"><span class="orange-icon">🍊</span>
+	<div class="full-width"><span><b>Novák Katalin kegyelmi döntése és lemondása</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">2024 eléjén robbant ki a kegyelmi ügy, ami szerint <b>Novák Katalin, volt köztársasági elnök újév alkalmával kegyelmet adott egy kegyetlen pedofil segítőjének, Kónya Endrének</b>.<br>A vádak szerint 2004 és 2016 között a bicskei gyermekotthon igazgatója, <b>Vásárhelyi János 10 kiskorút kényszerített orális szexre, különböző engedményekért cserébe</b>.<br>Miután az egyik áldozat öngyilkosságot követett el, az egyik bántalmazott fiú 2016-ban jelezte a gyermekvédelmi gyámjának a problémát, ekkor rögtön átköltöztették egy másik gyermekotthonba, az igazgatót pedig felmentették.<br>Novák Katalin ugyan lemondott, de bocsánatot azóta se kért senki. Ez körülbelül 225.000 fideszes szavazót tántorított el.</div></div>
+	</div>
+	<div class="list-item"><span class="orange-icon">🍊</span>
+	<div class="full-width"><span><b>A gödi Samsung halálgyár</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">A Fityesz-kormány nemcsak asszisztál ahhoz a gödi környezetszennyezéshez, amely már évek óta a korrupció révén szóba sem került, hanem még le is járatja magát vele a brutális hazugságaival. Szijjártó Péter külügyminiszter hiába állította, hogy 'minden rendben van és nem tudott ilyenekről', a <b>kiszivárgott titkosszolgálati jelentésekből kiderült: a kormány pontosan tudott a Samsung SDI gyár környékén mért brutális légszennyezésről és a talajvízbe került rákkeltő anyagokról</b>.<br>Szijjártó egyszerűen <b>letagadta a tényeket, és a gazdasági érdekeket a magyar emberek egészsége elé helyezte</b>.<br>Majd Orbán Viktor miniszterelnök a gödiek jogos félelmét és a mérgezésről szóló híreket egyszerűen <b>"kamuügynek" nevezte</b>.<br>Azóta azonban független mérések és videófelvételek igazolták, hogy a <b>gyár folyamatosan szennyezi a környezetet</b>, a hatóságok pedig nevetséges büntetésekkel vagy titkosítással próbálják menteni a menthetetlent.<br>Miközben a Fidesz-elit milliárdokat kaszál az akkumulátor-bizniszen, a gödi családoknak a magzatkárosító oldószerekkel és a mindent elnyomó zajjal kell együtt élniük.</div></div>
+	</div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Ügyészségi adatok módosítása</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span>
+	<div class="full-width"><span><b>Lázár János cigányellenes mondatai</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">Lázár János nem csak a MÁV és a közutak lerohasztásáról ismert, hanem a <b>szélsőséges, rasszista megnyílvánulásáról is, miszerint a migránsok helyett Magyarország 'belső tartalékának' kell a szaros WC-ket takarítania, akik a roma emberek</b>.<br>Ha te egy roma állampolgár vagy, akkor a fideszes közlekedési miniszter szerint te csak a WC-k takarításához értesz és neked azt kell csinálnod.</div></div>
+	</div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>A MÁV és a közutak teljes lerohaztása</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>A hódmezővásárhelyi rendőrkapitány öngyilkossága</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span>
+	<div class="full-width"><span><b>Szájer-ügy a brüsszeli ereszen</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">2020. november 27-én Brüsszelben a rendőrség felszámolt egy 25 fős meleg szexpartit Covidos előírások megszegése miatt. <b>Szájer József, volt fideszes politikus jelen volt a partin és a rendőrség elől megpróbált elszökni</b> úgy, hogy egy ereszen lecsúszik. Ez nem sikerült és elkapták őt. A nála lévő táskában <b>rengeteg tablettás (ecstasy) drog volt nála</b>.<br>Ez azért érdekes, mert <b>pont Szájer József volt, aki rengeteg melegellenes törvényjavaslatnál szavazott igennel</b>. Ironikus, nemde?</div></div>
+	</div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Kaleta pedofil ügy</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Lölő-jelenség a multimilliárdos Mészáros Lőrinccel</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Borkai ügy</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span>
+	<div class="full-width"><span><b>Az MNB 650 milliárd forintos kirablása</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">A Magyar Nemzeti Bank körüli botrány a modern magyar gazdaságtörténet egyik leggátlástalanabb közpénz-szivattyúja. <b>Matolcsy György vezetésével a jegybank több mint 260 milliárd forintnyi (később 650 milliárdra duzzadó) közvagyont játszott át saját alapítványaiba, amelyeket a NER-elit felerősödésére pazaroltak</b>. A kormány nevetséges jogi ütközésekkel próbálta elhitetni, hogy ez a hatalmas összeg az alapítványokba kerülve 'elveszítette közpénz jellegét'.<br>A gyakorlatban ez a Matolcsy-klán és a baráti körök (például Szemerey Tamás és a jegybankelnök fia, Matolcsy Ádám üzleti körei) gátlástalan finanszírozását jelentette.<br>A pénzt <b>luxusingatlanokra, túlárazott műkincsekre és kormányzati propaganda finanszírozására költötték, miközben a magyar lakosság a rekordméretű forintromlást nyögte</b>.<br>Ez a művelet nem más, mint a nemzeti vagyon módszeres, intézményesített magánzsebekbe vándoroltatása a függetlenség álcája mögé bújva. <b>A jegybanki profit nem a költségvetést vagy az országot gazdagította, hanem a hatalmi elit oligarchikus építkezését szolgálta</b>.</div></div>
+	</div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>A KATA eltörlése</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Völner-Schadl-botrány</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Elios-ügy Tiborcz Istvánnal</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Túlzottan oroszpárti kül- és belpolitika</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Az ország eladósítása orosz és kínai hitelekkel</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Hazugságok a nem létező amerikai védőpajzsról</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Hazugságok a Barátság Kőolajvezeték állapotáról</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Ellopott magánnyugdíjak</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Gyurcsány Ferenc elszámoltatásának a hiánya</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span>
+	<div class="full-width"><span><b>Pegasus-ügy izraeli kémszoftverrel</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">A kormány szerint mi egy jogállamban élünk és szabad mindenki, mégis kiderült, hogy egyes újságírók, aktivisták és még ellenzéki politikusok telefonjaikon izraeli kémszoftverek futnak/futottak. Ki tudja, lehet hogy az Ön vagy akár a családtagja eszközén is futhat hasonló kémszoftver!</div></div>
+	</div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>A milliárdokból felhúzott, propagandacélokra használt közmédia</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span>
+	<div class="full-width"><span><b>48 ezer halott a Covid idején</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">A 2020-as világjárvány alatt Magyarországon halt meg a legtöbb ember a lakosság szerint. Ez is tükrözi a gyenge egészségügyünket és az inkompetens veszélyhelyzeti kormányzást.<br><br>
 		A világjárvány idején az EU-s <b>lakosság</b>/<b>haláleset</b> aránya - minél alacsonyabb, annál rosszabb:<br><br>
 		Magyarország: <b>223,25</b><br>
 		Szlovákia: <b>246,45</b><br>
@@ -367,61 +242,56 @@
 		Lengyelország: <b>304,58</b><br>
 		Franciaország: <b>407,85</b><br>
 		Németország: <b>457,03</b><br><br>
-		Hivatalos adatok alapján 2022. december 28-ig <b>48 495 elhunyt embert jelentettek be a koronavírussal összefüggésben</b>.</div></div></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Oktatás és egészségügy elhanyagoltsága</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>A lombkoronasétány jelképes botránya</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Takács Péter alpári viselkedése</b></span></div>
-		<div class="list-item"><span class="orange-icon">🍊</span> <div style="width: 100%;"><span><b>Közvagyon alapítványokba való átmentése</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">Tudta, hogy a KESMA-hoz és az MTVA-hoz tartozó kormánypárti médiumok, mint az Origo, a Mandiner vagy az M1 működésére, valamint a kormányzati "kampányokra" és plakátokra az állam évente több mint 140 milliárd forintot költ közpénzből?<br>Ezeket a nem kért felületeket közvetve vagy közvetlenül olyan alapítványokon és állami hirdetéseken keresztül finanszírozzák, amelyekbe havonta milliók, sőt milliárdok áramlanak.</div></div></div>
-		<div class="orange-divider"></div>
-		<img src="https://static.fityesz.hu/images/assets/fityesz.png" alt="Fityesz Logó" width="160" height="161" class="fityesz-logo" text-align: center>
-		<div class="orange-divider"></div>
-		<p style="text-align: center; font-size: 11px;"><i><b>Ez az oldal párthovatartozástól és külső anyagi támogatástól független. Kizárólag magánvéleményt tükröz, és hobbiprojektként jött létre az állampárttal szembeni kritikai hangvétel és a véleménynyilvánítás szabadsága jegyében.<br>A honlap fejlesztőiként továbbra is a kormány- és a rendszerváltást támogatjuk.</b><br><br>Kapcsolati megkeresések esetén:<br>hivatalos@fityesz.hu</i></p>
+		Hivatalos adatok alapján 2022. december 28-ig <b>48 495 elhunyt embert jelentettek be a koronavírussal összefüggésben</b>.</div></div>
 	</div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Oktatás és egészségügy elhanyagoltsága</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>A lombkoronasétány jelképes botránya</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span> <span><b>Takács Péter alpári viselkedése</b></span></div>
+	<div class="list-item"><span class="orange-icon">🍊</span>
+	<div class="full-width"><span><b>Közvagyon alapítványokba való átmentése</b></span><button class="more-btn" onclick="toggleDetails(this)">Több <span class="arrow">▼</span></button><div class="details-content">Tudta, hogy a KESMA-hoz és az MTVA-hoz tartozó kormánypárti médiumok, mint az Origo, a Mandiner vagy az M1 működésére, valamint a kormányzati "kampányokra" és plakátokra az állam évente több mint 140 milliárd forintot költ közpénzből?<br>Ezeket a nem kért felületeket közvetve vagy közvetlenül olyan alapítványokon és állami hirdetéseken keresztül finanszírozzák, amelyekbe havonta milliók, sőt milliárdok áramlanak.</div></div>
+	</div>
+	<div class="orange-divider"></div>
+	<img src="https://static.fityesz.hu/images/assets/fityesz.png" alt="Fityesz Logó" width="160" height="161" class="fityesz-logo">
+	<div class="orange-divider"></div>
+	<p style="text-align:center;font-size:11px;"><i><b>Ez az oldal párthovatartozástól és külső anyagi támogatástól független. Kizárólag magánvéleményt tükröz, és hobbiprojektként jött létre az állampárttal szembeni kritikai hangvétel és a véleménynyilvánítás szabadsága jegyében.<br>A honlap fejlesztőiként továbbra is a kormány- és a rendszerváltást támogatjuk.</b><br><br>Kapcsolati megkeresések esetén:<br>hivatalos@fityesz.hu</i></p>
+  </div>
 </div>
 <script>
 	function updateTimer() {
-		const now = new Date();
-		let targetYear = now.getFullYear();
-		let targetDate = new Date(`April 13, ${targetYear} 00:00:00`);
-		if (now > targetDate) {
-			targetYear++;
-			targetDate = new Date(`April 13, ${targetYear} 00:00:00`);
-		}
-		const diff = targetDate - now;
-		const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-		const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-		const secs = Math.floor((diff % (1000 * 60)) / 1000);
-		document.getElementById("timer").innerHTML = 
-			`${days} nap, ${hours} óra, ${mins} perc, ${secs} másodperc`;
+	const now = new Date();
+	let y = now.getFullYear();
+	let target = new Date(`April 13, ${y} 00:00:00`);
+	if (now > target) target = new Date(`April 13, ${++y} 00:00:00`);
+	const diff = target - now;
+	const d = Math.floor(diff / 86400000);
+	const h = Math.floor((diff % 86400000) / 3600000);
+	const m = Math.floor((diff % 3600000) / 60000);
+	const s = Math.floor((diff % 60000) / 1000);
+	document.getElementById('timer').textContent = `${d} nap, ${h} óra, ${m} perc, ${s} másodperc`;
 	}
 	setInterval(updateTimer, 1000);
 	updateTimer();
-	const themeToggle = document.getElementById('theme-toggle');
-	const themeIcon = document.getElementById('theme-icon');
-	const body = document.body;
+
+	const toggle = document.getElementById('theme-toggle');
+	const icon = document.getElementById('theme-icon');
 	const sunIcon = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
 	const moonIcon = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
-	const savedTheme = localStorage.getItem('theme');
-	if (savedTheme === 'dark') {
-		body.classList.add('dark-mode');
-		themeIcon.innerHTML = sunIcon;
+
+	if (localStorage.getItem('theme') === 'dark') {
+	document.body.classList.add('dark-mode');
+	icon.innerHTML = sunIcon;
 	}
-	themeToggle.addEventListener('click', () => {
-		body.classList.toggle('dark-mode');
-		if (body.classList.contains('dark-mode')) {
-			themeIcon.innerHTML = sunIcon;
-			localStorage.setItem('theme', 'dark');
-		} else {
-			themeIcon.innerHTML = moonIcon;
-			localStorage.setItem('theme', 'light');
-		}
+	toggle.addEventListener('click', () => {
+	const dark = document.body.classList.toggle('dark-mode');
+	icon.innerHTML = dark ? sunIcon : moonIcon;
+	localStorage.setItem('theme', dark ? 'dark' : 'light');
 	});
+
 	function toggleDetails(btn) {
-		const container = btn.nextElementSibling;
-		const isOpening = !container.classList.contains('open');
-		container.classList.toggle('open');
-		btn.innerHTML = isOpening ? 'Kevesebb <span class="arrow">▼</span>' : 'Több <span class="arrow">▼</span>';
+	const container = btn.nextElementSibling;
+	const isOpening = !container.classList.contains('open');
+	container.classList.toggle('open');
+	btn.innerHTML = isOpening ? 'Kevesebb <span class="arrow">\u25BC</span>' : 'Több <span class="arrow">\u25BC</span>';
 	}
 </script>
 </body>
