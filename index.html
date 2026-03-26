@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="https://static.fityesz.hu/images/assets/fityesz.png">
 	<title>Fityesz - Az igazság</title>
-	<!-- Embed system -->
+	<!-- EMBED SYSTEM -->
 	<meta name="description" content="A Fideszt már nem lehet a régi, 'fiatal demokrata' módon nevezni. Már inkább Fityesznek felel meg, mint egy működő állam rendszerének.">
 	<meta name="theme-color" content="#ff6600">
 	<meta property="og:type" content="website">
@@ -176,8 +176,76 @@
 		  text-shadow: 0 1px 2px rgba(255,102,0,.2);
 		}
 		body.dark-mode .countdown-timer { color: #ff8533; text-shadow: 0 2px 5px rgba(0,0,0,.5); }
+
+		.survey-popup{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:650px;background:#fff;border-top:3px solid #ff6600;box-shadow:0 -6px 30px rgba(0,0,0,.18);z-index:9000;padding:14px 20px 12px;font-family:'Inter','Segoe UI',sans-serif;transition:all .35s ease;}
+		body.dark-mode .survey-popup{background:#1a1a1a;color:#e0e0e0;box-shadow:0 -6px 30px rgba(0,0,0,.6);}
+		.survey-intro-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+		.survey-intro-text{flex:1;font-size:.93em;color:#444;}
+		body.dark-mode .survey-intro-text{color:#ccc;}
+		.btn-start{background:#ff6600;color:#fff;border:none;border-radius:20px;padding:8px 20px;font-size:.9em;font-weight:700;cursor:pointer;white-space:nowrap;transition:background .2s;}
+		.btn-start:hover{background:#e55a00;}
+		.survey-form{margin-top:14px;display:none;}
+		.survey-form.visible{display:block;}
+		.survey-q{font-weight:700;font-size:.95em;margin-bottom:8px;color:#222;}
+		body.dark-mode .survey-q{color:#eee;}
+		.survey-checkboxes{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
+		.survey-checkboxes label{display:flex;align-items:center;gap:8px;font-size:.9em;cursor:pointer;color:#333;}
+		body.dark-mode .survey-checkboxes label{color:#ccc;}
+		.survey-checkboxes input[type=checkbox]{accent-color:#ff6600;width:16px;height:16px;cursor:pointer;}
+		.survey-actions{display:flex;align-items:center;gap:14px;margin-bottom:10px;flex-wrap:wrap;}
+		.btn-submit{background:#ff6600;color:#fff;border:none;border-radius:20px;padding:8px 22px;font-size:.9em;font-weight:700;cursor:pointer;transition:background .2s;}
+		.btn-submit:hover{background:#e55a00;}
+		.btn-skip{background:none;border:none;color:#ff6600;font-size:.82em;cursor:pointer;padding:0;text-decoration:underline;font-weight:600;}
+		.btn-skip:hover{color:#cc4400;}
+		.survey-thanks{font-size:.93em;color:#444;margin-bottom:10px;font-weight:600;}
+		body.dark-mode .survey-thanks{color:#bbb;}
+		.survey-divider{border:none;border-top:1px solid #f0e0d0;margin:10px 0;}
+		body.dark-mode .survey-divider{border-color:#333;}
+		.theme-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
+		.theme-pref-btns{display:flex;gap:8px;}
+		.btn-theme-pref{background:#f5f5f5;color:#333;border:2px solid #ddd;border-radius:16px;padding:5px 16px;font-size:.88em;font-weight:600;cursor:pointer;transition:all .2s;}
+		body.dark-mode .btn-theme-pref{background:#2a2a2a;color:#ccc;border-color:#444;}
+		.btn-theme-pref.active{background:#ff6600 !important;color:#fff !important;border-color:#ff6600 !important;}
+		.btn-save{background:#ff6600;color:#fff;border:none;border-radius:20px;padding:7px 22px;font-size:.9em;font-weight:700;cursor:pointer;transition:background .2s;margin-left:auto;}
+		.btn-save:hover{background:#e55a00;}
+		.btn-save:disabled{background:#ccc;cursor:not-allowed;}
+		/* SHARE SECTION */
+		.share-section{display:flex;align-items:center;gap:18px;margin:0 0 25px;padding:16px 20px;background:linear-gradient(135deg,rgba(255,102,0,.1),rgba(255,102,0,.03));border-left:4px solid #ff6600;border-radius:8px;flex-wrap:wrap;}
+		body.dark-mode .share-section{background:linear-gradient(135deg,rgba(255,102,0,.15),rgba(255,102,0,.05));border-left-color:#cc5200;}
+		.share-title{color:#ff6600;font-weight:800;font-size:1.08em;letter-spacing:.4px;flex:1;margin:0;}
+		.btn-fb-share{background:none;border:none;cursor:pointer;padding:4px;transition:transform .2s;}
+		.btn-fb-share:hover{transform:scale(1.1);}
+		.btn-fb-share img{width:44px;height:44px;border-radius:8px;display:block;}
+		/* FACEBOOK MODAL */
+		.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;}
+		.modal-overlay.hidden{display:none;}
+		.modal-box{background:#fff;border-radius:16px;padding:32px 26px 22px;max-width:500px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.4);font-family:'Inter','Segoe UI',sans-serif;position:relative;}
+		body.dark-mode .modal-box{background:#1a1a1a;color:#e0e0e0;}
+		.modal-close-x{position:absolute;top:10px;right:14px;background:none;border:none;font-size:1.6em;line-height:1;color:#aaa;cursor:pointer;padding:2px 8px;border-radius:6px;transition:color .2s,background .2s;z-index:10;}
+		.modal-close-x:hover{color:#333;background:#f0f0f0;}
+		body.dark-mode .modal-close-x{color:#666;}
+		body.dark-mode .modal-close-x:hover{color:#eee;background:#2a2a2a;}
+		.modal-box h3{margin:0 0 14px;font-size:1.15em;color:#222;font-weight:800;line-height:1.3;}
+		body.dark-mode .modal-box h3{color:#fff;}
+		.modal-box p{font-size:.93em;color:#444;margin-bottom:10px;}
+		body.dark-mode .modal-box p{color:#bbb;}
+		.copy-block{background:#fff8f2;border:1px solid #ffcc99;border-radius:10px;padding:14px 16px;margin-bottom:14px;display:flex;flex-direction:column;gap:10px;}
+		body.dark-mode .copy-block{background:#2a1a00;border-color:#994400;}
+		.copy-block-text{font-size:.9em;color:#333;line-height:1.6;}
+		body.dark-mode .copy-block-text{color:#ddd;}
+		.btn-copy{align-self:flex-end;background:#ff6600;color:#fff;border:none;border-radius:14px;padding:7px 18px;font-size:.85em;font-weight:700;cursor:pointer;transition:background .2s;}
+		.btn-copy:hover{background:#e55a00;}
+		.modal-open-row{margin:12px 0;font-size:.93em;color:#444;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+		body.dark-mode .modal-open-row{color:#bbb;}
+		.btn-fb-open{background:#1877f2;color:#fff;border:none;border-radius:14px;padding:7px 18px;font-size:.9em;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
+		.btn-fb-open:hover{background:#1260c9;}
+		.btn-kozzetettem{width:100%;margin-top:10px;background:#ff6600;color:#fff;border:none;border-radius:20px;padding:11px;font-size:.97em;font-weight:800;cursor:pointer;transition:background .2s;}
+		.btn-kozzetettem:hover{background:#e55a00;}
+		.modal-thanks{text-align:center;font-size:.95em;font-weight:600;color:#ff6600;margin-top:10px;display:none;}
+		body.dark-mode .modal-thanks{color:#ff8533;}
+		@media(max-width:450px){.survey-popup{max-width:100%;}.share-title{font-size:.95em;}}
 	</style>
-	<!-- Fonting system -->
+	<!-- FONTING SYSTEM -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -195,6 +263,13 @@
 	<div class="countdown-text">Már csak ennyi idő van vissza az április 12-i országgyűlési választásokig:</div>
 	<div id="timer" class="countdown-timer">0 nap, 0 óra, 0 perc, 0 másodperc</div>
 	<div class="countdown-text">SZAVAZZ A RENDSZERVÁLTÁSRA!<br>ERRE CSAK A LEGESÉLYESEBB TISZA PÁRT KÉPES!</div></div>
+
+	<div class="share-section">
+	  <p class="share-title">OSZD MEG A FITYESZRŐL A VALÓSÁGOT!</p>
+	  <button class="btn-fb-share" onclick="openSharePopup()" aria-label="Megosztás Facebookon">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/960px-Facebook_Logo_2023.png" alt="Facebook">
+	  </button>
+	</div>
 	<p><b>A Fiatal Demokraták Szövetsége már nem az a pártrendszer, amiben most az épeszű honfitársaink megbíznának. 16 év után már mindannyian tudjuk: ennek a vergődő hatalomnak mennie kell.</b></p>
 	<p>Ezért nevezhetnénk ezt a rendszert már inkább Fityesznek, reflektálva az összeomló magyar közszolgáltatásokra és a régóta tartó korrupcióra.</p>
 	<p>De akkor miért is a Fityesz? Mert ez már nem kormányzás, hanem csak játék a sorsunkkal.</p>
@@ -292,6 +367,177 @@
 	container.classList.toggle('open');
 	btn.innerHTML = isOpening ? 'Kevesebb <span class="arrow">\u25BC</span>' : 'Több <span class="arrow">\u25BC</span>';
 	}
+
+	<!-- SURVEY SYSTEM -->
+	const SURVEY_KEY = 'fityesz_survey_done';
+	let surveyDone = false;
+	let selectedThemePref = null;
+	document.addEventListener('DOMContentLoaded', function() {
+		if (localStorage.getItem(SURVEY_KEY) === 'true') {
+			var p = document.getElementById('survey-popup');
+			if (p) p.style.display = 'none';
+		} else {
+			var cur = localStorage.getItem('theme');
+			if (cur) {
+				selectedThemePref = cur;
+				var bd = document.getElementById('btn-dark');
+				var bl = document.getElementById('btn-light');
+				var bs = document.getElementById('btn-save');
+				if (bd && bl && bs) {
+					(cur === 'dark' ? bd : bl).classList.add('active');
+					bs.disabled = false;
+				}
+			}
+		}
+		var ov = document.getElementById('fb-modal-overlay');
+		if (ov) ov.addEventListener('click', function(e){ if(e.target===this) closeFbModal(); });
+	});
+
+	function startSurvey() {
+		document.getElementById('survey-form').classList.add('visible');
+		document.querySelector('.btn-start').style.display = 'none';
+	}
+	function skipSurvey() {
+		document.getElementById('q1-section').style.display = 'none';
+		surveyDone = true;
+		var bs = document.getElementById('btn-save');
+		if (bs) bs.disabled = (selectedThemePref === null);
+	}
+	async function submitSurvey() {
+		var checked = Array.from(document.querySelectorAll('#q1-section input[type=checkbox]:checked')).map(function(c){return c.value;});
+		if (checked.length > 0) await incrementSheetDB(checked);
+		document.getElementById('q1-section').style.display = 'none';
+		document.getElementById('q1-thanks').style.display = 'block';
+		surveyDone = true;
+		var bs = document.getElementById('btn-save');
+		if (bs) bs.disabled = (selectedThemePref === null);
+	}
+	function setThemePref(theme) {
+		selectedThemePref = theme;
+		document.getElementById('btn-dark').classList.toggle('active', theme === 'dark');
+		document.getElementById('btn-light').classList.toggle('active', theme === 'light');
+		var isDark = (theme === 'dark');
+		document.body.classList.toggle('dark-mode', isDark);
+		icon.innerHTML = isDark ? sunIcon : moonIcon;
+		document.getElementById('btn-save').disabled = false;
+	}
+	function savePref() {
+		if (selectedThemePref) localStorage.setItem('theme', selectedThemePref);
+		if (surveyDone) {
+			localStorage.setItem(SURVEY_KEY, 'true');
+			var popup = document.getElementById('survey-popup');
+			popup.style.transition = 'opacity .4s ease';
+			popup.style.opacity = '0';
+			setTimeout(function(){ popup.style.display = 'none'; }, 420);
+		}
+	}
+
+	async function incrementSheetDB(cols) {
+		var base = 'https://sheetdb.io/api/v1/b3qjenikhlqwp';
+		try {
+			var getResp = await fetch(base, {headers:{'Accept':'application/json'}});
+			var rows = await getResp.json();
+			if (!Array.isArray(rows) || rows.length === 0) {
+				var initData = {'google':0,'social-media':0,'with-qr':0,'other':0};
+				cols.forEach(function(c){ initData[c] = 1; });
+				await fetch(base, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({data: initData})});
+				return;
+			}
+			var row = rows[0];
+			var updateData = {};
+			cols.forEach(function(c){ updateData[c] = (parseInt(row[c]) || 0) + 1; });
+			var rowKeys = Object.keys(row);
+			var idCol = row.hasOwnProperty('id') ? 'id' : (rowKeys.find(function(k){ return !cols.includes(k); }) || rowKeys[0]);
+			var idVal = String(row[idCol]);
+			var patchResp = await fetch(base+'/'+encodeURIComponent(idCol)+'/'+encodeURIComponent(idVal), {
+				method:'PATCH', headers:{'Content-Type':'application/json'}, body: JSON.stringify({data: updateData})
+			});
+			console.log('[SheetDB] PATCH:', await patchResp.json());
+		} catch(err) { console.error('[SheetDB]', err); }
+	}
+
+	// ===== FACEBOOK SHARE MODAL =====
+	function openSharePopup() {
+		document.getElementById('fb-modal-overlay').classList.remove('hidden');
+	}
+	function closeFbModal() {
+		document.getElementById('fb-modal-overlay').classList.add('hidden');
+	}
+	function copyShareText() {
+		var txt = document.getElementById('share-text').textContent;
+		navigator.clipboard.writeText(txt).catch(function(){
+			var el = document.createElement('textarea');
+			el.value = txt; document.body.appendChild(el); el.select(); document.execCommand('copy'); document.body.removeChild(el);
+		});
+		var btn = document.querySelector('.btn-copy');
+		btn.textContent = '✓ Másolva';
+		setTimeout(function(){ btn.textContent = 'Másolás'; }, 2000);
+	}
+	function handleKozzetettem() {
+		document.querySelector('.btn-kozzetettem').style.display = 'none';
+		var t = document.getElementById('modal-thanks');
+		t.style.display = 'block';
+		setTimeout(function(){ window.location.href = 'https://fityesz.hu'; }, 2500);
+	}
+
 </script>
+
+<!-- SURVEY POPUP -->
+<div id="survey-popup" class="survey-popup">
+  <div class="survey-intro-row">
+	<span class="survey-intro-text">Látjuk, új vagy! Ha szeretnéd, beállíthatod a preferenciádat a legjobb élmény érdekében.</span>
+	<button class="btn-start" onclick="startSurvey()">Kezdés ▶</button>
+  </div>
+  <div id="survey-form" class="survey-form">
+	<hr class="survey-divider">
+	<div id="q1-section">
+	  <p class="survey-q">Hogyan találtál erre a honlapra? <span style="font-weight:400;font-size:.88em;">(Többet is kiválaszthatsz!)</span></p>
+	  <div class="survey-checkboxes">
+		<label><input type="checkbox" value="google"> Keresőmotorok</label>
+		<label><input type="checkbox" value="social-media"> Közösségi média</label>
+		<label><input type="checkbox" value="with-qr"> QR-kódos plakátok</label>
+		<label><input type="checkbox" value="other"> Egyéb</label>
+	  </div>
+	  <div class="survey-actions">
+		<button class="btn-submit" onclick="submitSurvey()">Beküldés</button>
+		<button class="btn-skip" onclick="skipSurvey()">Kérdőív kihagyása</button>
+	  </div>
+	</div>
+	<div id="q1-thanks" style="display:none;">
+	  <p class="survey-thanks">Köszönjük a kérdőívünk kitöltését!</p>
+	</div>
+	<hr class="survey-divider">
+	<p class="survey-q">Milyen megjelenítési módot részesítenél előnyben?</p>
+	<div class="theme-row">
+	  <div class="theme-pref-btns">
+		<button class="btn-theme-pref" id="btn-dark" onclick="setThemePref('dark')">🌙 Sötét</button>
+		<button class="btn-theme-pref" id="btn-light" onclick="setThemePref('light')">☀️ Világos</button>
+	  </div>
+	  <button class="btn-save" id="btn-save" onclick="savePref()" disabled>Mentés</button>
+	</div>
+  </div>
+</div>
+
+<!-- FACEBOOK SHARE MODAL -->
+<div id="fb-modal-overlay" class="modal-overlay hidden">
+  <div class="modal-box">
+	<button class="modal-close-x" onclick="closeFbModal()" aria-label="Bezárás">&#215;</button>
+	<h3>Szeretnéd hirdetni a Fideszről a valóságot?</h3>
+	<p>Másold ki ezt a szöveget:</p>
+	<div class="copy-block">
+	  <span class="copy-block-text" id="share-text">A Fityesz–KDNP bajban van, és én már elolvastam a Fityesz-oldalon, hogy milyen borzalmakra készül ez a bukott rendszer! Olvasd el te is!</span>
+	  <button class="btn-copy" onclick="copyShareText()">Másolás</button>
+	</div>
+	<p>Majd illeszd be a Facebookba, és nyomd meg a „Küldés" gombot! A rendszer a linket automatikusan beilleszti.</p>
+	<div class="modal-open-row">
+	  <span>Kimásoltad? Facebook megnyitása:</span>
+	  <a href="https://www.facebook.com/sharer/sharer.php?u=https://fityesz.hu"
+		 onclick="var w=600,h=500,l=Math.round((screen.width-w)/2),t=Math.round((screen.height-h)/2);window.open(this.href,'newwindow','width='+w+',height='+h+',left='+l+',top='+t+',resizable=yes');return false;"
+		 class="btn-fb-open">Megnyitás</a>
+	</div>
+	<button class="btn-kozzetettem" onclick="handleKozzetettem()">Közzétettem</button>
+	<div class="modal-thanks" id="modal-thanks">Köszönjük szépen a promóciót! Visszairányítunk a honlaphoz...</div>
+  </div>
+</div>
 </body>
 </html>
