@@ -103,7 +103,7 @@
 		body.dark-mode .quote { color: #bbb; border-left-color: #cc5200; }
 		body.dark-mode #theme-toggle { background-color: #fff; color: #121212; box-shadow: 0 4px 15px rgba(255,255,255,.2); }
 		@media (max-width: 450px) {
-		  .container { border-radius: 0; margin: 0; max-width: 100%; box-shadow: none; }
+		  .container { border-radius: 0; margin: 0; max-width: 100%; box-shadow: none; overflow: visible; }
 		  body.dark-mode { background-color: #000; }
 		}
 		.more-btn {
@@ -135,7 +135,7 @@
 		}
 		body.dark-mode .details-content { color: #bbb; background: rgba(255,102,0,.05); border-left-color: #cc5200; }
 		.details-content.open {
-		  max-height: 500px;
+		  max-height: 2000px;
 		  margin-top: 12px;
 		  padding: 10px 15px;
 		  transition: max-height .8s ease-in-out, padding .3s ease;
@@ -456,7 +456,7 @@
 		} catch(err) { console.error('[SheetDB]', err); }
 	}
 
-	// ===== FACEBOOK SHARE MODAL =====
+	<!-- FACEBOOK SHARE MODAL -->
 	function openSharePopup() {
 		document.getElementById('fb-modal-overlay').classList.remove('hidden');
 	}
