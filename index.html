@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-	<!-- FITYESZ 2.1.1 (FIXDATE 2026. 03. 29.) /// © COPYRIGHT FITYESZ MOZGALOM (DO NOT DISTRIBUTE) -->
+	<!-- FITYESZ 2.1.3 (FIXDATE 2026. 03. 29.) /// © COPYRIGHT FITYESZ MOZGALOM (DO NOT DISTRIBUTE) -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="https://static.fityesz.hu/images/assets/fityesz.png">
@@ -210,7 +210,6 @@
 		.stat-number { font-size: 2.1em; font-weight: 800; color: #ff6600; line-height: 1; }
 		.stat-label { font-size: .76em; color: #555; font-weight: 600; letter-spacing: .3px; margin-top: 4px; }
 		body.dark-mode .stat-label { color: #aaa; }
-
 		.category-card { border: 1px solid #eee; border-radius: 14px; margin-bottom: 12px; overflow: hidden; transition: all .25s; }
 		body.dark-mode .category-card { border-color: #333; }
 		.category-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.07); }
@@ -220,7 +219,6 @@
 		body.dark-mode .category-header:hover { background: #111; }
 		.category-card.open > .category-header { background: #f9f9f9; }
 		body.dark-mode .category-card.open > .category-header { background: #111; }
-		
 		.cat-icon { font-size: 1.55em; flex-shrink: 0; line-height: 1; }
 		.cat-info { flex: 1; min-width: 0; }
 		.cat-title { font-weight: 700; font-size: 1.03em; color: #000; line-height: 1.2; }
@@ -242,12 +240,10 @@
 		.category-card.open .category-body { max-height: 8000px; transition: max-height 1.5s ease-in-out; border-top: 1px solid #eee; }
 		body.dark-mode .category-card.open .category-body { border-top-color: #333; }
 		.category-items { padding: 4px 0; }
-
 		.list-item { padding: 13px 18px; display: flex; align-items: flex-start; border-bottom: 1px solid #eee; margin-bottom: 0; }
 		.list-item:last-child { border-bottom: none; }
 		body.dark-mode .list-item { border-bottom-color: #222; }
 		.orange-icon { margin-right: 10px; flex-shrink: 0; font-size: 1.1em; line-height: 1.5; }
-
 		.cc-1{border-left:4px solid #dc2626!important;} .cc-2{border-left:4px solid #ea580c!important;} .cc-3{border-left:4px solid #1d4ed8!important;} .cc-4{border-left:4px solid #7c3aed!important;} .cc-5{border-left:4px solid #059669!important;} .cc-6{border-left:4px solid #ca8a04!important;} .cc-7{border-left:4px solid #b45309!important;} .cc-8{border-left:4px solid #991b1b!important;} .cc-9{border-left:4px solid #475569!important;}
 
 		/* CHART SECTION STYLES */
@@ -263,7 +259,6 @@
 		body.dark-mode .chart-tab.active { background: #ff6600; color: #fff; }
 		.chart-tab:not(.active):hover { background: #f9f9f9; color: #000; }
 		body.dark-mode .chart-tab:not(.active):hover { background: #111; color: #fff; }
-
 		.bar-chart-container { display: flex; flex-direction: column; gap: 9px; }
 		.bar-row { display: grid; grid-template-columns: 28px minmax(0,1fr) 1fr 38px 52px; align-items: center; gap: 10px; }
 		.bar-icon { font-size: 1.25em; text-align: center; line-height: 1; }
@@ -276,7 +271,6 @@
 		.bar-score { font-weight: 800; font-size: .95em; text-align: right; }
 		.bar-items { font-size: .76em; color: #555; text-align: right; white-space: nowrap; font-weight: 600; }
 		body.dark-mode .bar-items { color: #aaa; }
-
 		.bubble-matrix { display: flex; flex-direction: column; gap: 14px; }
 		.bubble-row-wrap { display: flex; flex-direction: column; gap: 6px; }
 		.bubble-cat-label { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: .85em; color: #555; }
@@ -284,17 +278,14 @@
 		.bubbles-row { display: flex; flex-wrap: wrap; gap: 7px; }
 		.bubble-item { border-radius: 20px; padding: 5px 12px; font-size: .75em; font-weight: 700; color: #fff; cursor: pointer; transition: transform .2s, box-shadow .2s; max-width: 160px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 		.bubble-item:hover { transform: scale(1.07); box-shadow: 0 4px 14px rgba(0,0,0,.25); }
-
 		#radar-wrap { display: flex; justify-content: center; align-items: center; }
 		#radar-canvas { display: block; }
-
 		.chart-summary { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
 		.chart-stat-pill { flex: 1; min-width: 100px; background: #f9f9f9; border: 1px solid #eee; border-radius: 10px; padding: 12px 14px; text-align: center; }
 		body.dark-mode .chart-stat-pill { background: #111; border-color: #333; }
 		.chart-stat-num { font-size: 1.6em; font-weight: 800; color: #ff6600; line-height: 1; }
 		.chart-stat-lbl { font-size: .74em; color: #555; font-weight: 600; margin-top: 3px; }
 		body.dark-mode .chart-stat-lbl { color: #aaa; }
-
 		.sev-legend { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
 		.sev-item { display: flex; align-items: center; gap: 5px; font-size: .76em; color: #555; }
 		body.dark-mode .sev-item { color: #aaa; }
@@ -311,10 +302,12 @@
 		.survey-form.visible{display:block;}
 		.survey-q{font-weight:700;font-size:.95em;margin-bottom:8px;color:#222;}
 		body.dark-mode .survey-q{color:#eee;}
-		.survey-checkboxes{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;}
-		.survey-checkboxes label{display:flex;align-items:center;gap:8px;font-size:.9em;cursor:pointer;color:#333;}
-		body.dark-mode .survey-checkboxes label{color:#ccc;}
-		.survey-checkboxes input[type=checkbox]{accent-color:#ff6600;width:16px;height:16px;cursor:pointer;}
+		.survey-checkboxes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+		.survey-checkboxes label {display: inline-flex; align-items: center; justify-content: center; background: #f5f5f5; border: 2px solid #ddd; border-radius: 16px; padding: 8px 16px; font-size: .88em; font-weight: 600; cursor: pointer; color: #333; transition: all .2s; user-select: none; }
+		body.dark-mode .survey-checkboxes label { background: #2a2a2a; border-color: #444; color: #ccc; }
+		.survey-checkboxes label:has(input:checked) { background: #ff6600; border-color: #ff6600; color: #fff; }
+		body.dark-mode .survey-checkboxes label:has(input:checked) { background: #ff6600; border-color: #ff6600; color: #fff; }
+		.survey-checkboxes input[type=checkbox] { display: none; }
 		.survey-actions{display:flex;align-items:center;gap:14px;margin-bottom:10px;flex-wrap:wrap;}
 		.btn-submit{background:#ff6600;color:#fff;border:none;border-radius:20px;padding:8px 22px;font-size:.9em;font-weight:700;cursor:pointer;transition:background .2s;}
 		.btn-submit:hover{background:#e55a00;}
@@ -696,7 +689,7 @@
 	  <div id="view-bar" class="bar-chart-container"></div>
 	  <div id="view-bubble" class="bubble-matrix" style="display:none;"></div>
 	  <div id="view-radar" style="display:none;" id="radar-wrap">
-		<canvas id="radar-canvas" width="600" height="420"></canvas>
+		<div id="radar-svg-wrap" style="width:100%;display:flex;justify-content:center;align-items:center;"></div>
 	  </div>
 	  <div class="chart-summary">
 		<div class="chart-stat-pill"><div class="chart-stat-num">27</div><div class="chart-stat-lbl">összesített ügy</div></div>
@@ -751,12 +744,10 @@
 	}
 	setInterval(updateTimer, 1000);
 	updateTimer();
-
 	const toggle = document.getElementById('theme-toggle');
 	const icon = document.getElementById('theme-icon');
 	const sunIcon = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
 	const moonIcon = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
-
 	if (localStorage.getItem('theme') === 'dark') {
 	  document.body.classList.add('dark-mode');
 	  icon.innerHTML = sunIcon;
@@ -765,6 +756,9 @@
 	  const dark = document.body.classList.toggle('dark-mode');
 	  icon.innerHTML = dark ? sunIcon : moonIcon;
 	  localStorage.setItem('theme', dark ? 'dark' : 'light');
+	  selectedThemePref = dark ? 'dark' : 'light';
+	  document.getElementById('btn-dark').classList.toggle('active', dark);
+	  document.getElementById('btn-light').classList.toggle('active', !dark);
 	  if (currentChart === 'radar') drawRadar();
 	});
 
@@ -772,7 +766,6 @@
 	function toggleCategory(card) {
 	  card.classList.toggle('open');
 	}
-
 	function toggleDetails(btn) {
 	  const container = btn.nextElementSibling;
 	  const isOpening = !container.classList.contains('open');
@@ -793,7 +786,6 @@
 	  if (type === 'bar' && !barsAnimated) { animateBars(); barsAnimated = true; }
 	  if (type === 'radar') drawRadar();
 	}
-
 	function buildBarChart() {
 	  const container = document.getElementById('view-bar');
 	  let html = '';
@@ -814,7 +806,6 @@
 	  });
 	  container.innerHTML = html;
 	}
-
 	function animateBars() {
 	  requestAnimationFrame(() => {
 		document.querySelectorAll('.bar-fill').forEach((bar, i) => {
@@ -823,7 +814,6 @@
 		});
 	  });
 	}
-
 	function buildBubbleMatrix() {
 	  const container = document.getElementById('view-bubble');
 	  let html = '';
@@ -841,7 +831,6 @@
 	  });
 	  container.innerHTML = html;
 	}
-
 	function scrollToCategory(catId) {
 	  const sections = document.querySelectorAll('.category-card');
 	  const idx = {korrupcio:0,jogallam:1,kulpolitika:2,szexbotrany:3,egeszsegugy:4,media:5,gazdasagi:6,gyulolet:7,infra:8};
@@ -851,168 +840,101 @@
 		setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
 	  }
 	}
-
+	/* FIXED AND IMPROVED RADAR OVERLAY (2.1.2) */
 	function drawRadar() {
-	  const canvas = document.getElementById('radar-canvas');
-	  if (!canvas) return;
-	  const ctx = canvas.getContext('2d');
-	  const W = canvas.width, H = canvas.height;
-	  const cx = W / 2, cy = H / 2 + 10;
-	  const R = Math.min(W, H) * 0.36;
-	  const n = chartData.length;
+	  const wrap = document.getElementById('radar-svg-wrap');
+	  if (!wrap) return;
 	  const isDark = document.body.classList.contains('dark-mode');
-	  const bgColor = isDark ? '#000000' : '#ffffff';
-	  const gridColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
-	  const labelColor = isDark ? '#bbbbbb' : '#555555';
-
-	  ctx.clearRect(0, 0, W, H);
-	  ctx.fillStyle = bgColor;
-	  ctx.fillRect(0, 0, W, H);
-
-	  for (let ring = 1; ring <= 5; ring++) {
-		const r = R * ring / 5;
-		ctx.beginPath();
+	  const n = chartData.length;
+	  const W = Math.min(560, (document.querySelector('.container').clientWidth || 560) - 40);
+	  const PAD = 70;
+	  const R = (W - PAD * 2) / 2;
+	  const cx = W / 2, cy = W * 0.5 + 10;
+	  const H = cy + R + PAD + 10;
+	  const bgColor = isDark ? '#000' : '#fff';
+	  const gridColor = isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.1)';
+	  const labelColor = isDark ? '#bbb' : '#444';
+	  const rings = 5;
+	  let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" style="font-family:Inter,Segoe UI,sans-serif;overflow:visible;">`;
+	  svg += `<rect width="${W}" height="${H}" fill="${bgColor}"/>`;
+	  svg += `<text x="${cx}" y="18" text-anchor="middle" font-size="15" font-weight="700" fill="${isDark?'rgba(255,255,255,0.35)':'rgba(0,0,0,0.25)'}" letter-spacing="0.5">Súlyossági Index (0–10)</text>`;
+	  for (let ring = 1; ring <= rings; ring++) {
+		const r = R * ring / rings;
+		let pts = '';
 		for (let i = 0; i < n; i++) {
 		  const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
 		  const x = cx + r * Math.cos(angle);
 		  const y = cy + r * Math.sin(angle);
-		  if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+		  pts += (i === 0 ? 'M' : 'L') + `${x.toFixed(2)},${y.toFixed(2)}`;
 		}
-		ctx.closePath();
-		ctx.strokeStyle = gridColor;
-		ctx.lineWidth = 1;
-		ctx.stroke();
-		ctx.fillStyle = isDark ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.2)';
-		ctx.font = '10px Inter';
-		ctx.textAlign = 'center';
-		ctx.fillText(ring * 2, cx + 4, cy - r + 4);
+		pts += 'Z';
+		svg += `<path d="${pts}" fill="none" stroke="${gridColor}" stroke-width="1"/>`;
+		const labelVal = ring * 2;
+		svg += `<text x="${(cx+4).toFixed(1)}" y="${(cy - r + 4).toFixed(1)}" font-size="9" fill="${isDark?'rgba(255,255,255,0.25)':'rgba(0,0,0,0.2)'}" text-anchor="start">${labelVal}</text>`;
 	  }
-
 	  for (let i = 0; i < n; i++) {
 		const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
-		ctx.beginPath();
-		ctx.moveTo(cx, cy);
-		ctx.lineTo(cx + R * Math.cos(angle), cy + R * Math.sin(angle));
-		ctx.strokeStyle = gridColor;
-		ctx.lineWidth = 1;
-		ctx.stroke();
+		svg += `<line x1="${cx.toFixed(2)}" y1="${cy.toFixed(2)}" x2="${(cx + R * Math.cos(angle)).toFixed(2)}" y2="${(cy + R * Math.sin(angle)).toFixed(2)}" stroke="${gridColor}" stroke-width="1"/>`;
 	  }
-
-	  ctx.beginPath();
+	  let dataPts = '';
 	  chartData.forEach((cat, i) => {
 		const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
 		const r = R * cat.severity / 10;
 		const x = cx + r * Math.cos(angle);
 		const y = cy + r * Math.sin(angle);
-		if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+		dataPts += (i === 0 ? 'M' : 'L') + `${x.toFixed(2)},${y.toFixed(2)}`;
 	  });
-	  ctx.closePath();
-	  ctx.fillStyle = 'rgba(255,102,0,0.18)';
-	  ctx.fill();
-	  ctx.strokeStyle = '#ff6600';
-	  ctx.lineWidth = 2.5;
-	  ctx.stroke();
-
+	  dataPts += 'Z';
+	  svg += `<path d="${dataPts}" fill="rgba(255,102,0,0.18)" stroke="#ff6600" stroke-width="2.5" stroke-linejoin="round"/>`;
 	  chartData.forEach((cat, i) => {
 		const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
 		const r = R * cat.severity / 10;
-		const x = cx + r * Math.cos(angle);
-		const y = cy + r * Math.sin(angle);
-		ctx.beginPath();
-		ctx.arc(x, y, 5, 0, Math.PI * 2);
-		ctx.fillStyle = cat.color;
-		ctx.fill();
-		ctx.strokeStyle = bgColor;
-		ctx.lineWidth = 2;
-		ctx.stroke();
+		const x = (cx + r * Math.cos(angle)).toFixed(2);
+		const y = (cy + r * Math.sin(angle)).toFixed(2);
+		svg += `<circle cx="${x}" cy="${y}" r="5" fill="${cat.color}" stroke="${bgColor}" stroke-width="2"/>`;
 	  });
-
 	  chartData.forEach((cat, i) => {
 		const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
-		const labelR = R + 28;
-		const x = cx + labelR * Math.cos(angle);
-		const y = cy + labelR * Math.sin(angle);
-		ctx.font = 'bold 11px Inter';
-		ctx.fillStyle = labelColor;
-		ctx.textAlign = Math.cos(angle) < -0.1 ? 'right' : (Math.cos(angle) > 0.1 ? 'left' : 'center');
-		ctx.textBaseline = Math.sin(angle) < -0.3 ? 'bottom' : (Math.sin(angle) > 0.3 ? 'top' : 'middle');
-		ctx.fillText(cat.icon + ' ' + cat.short, x, y);
+		const labelR = R + 26;
+		const lx = (cx + labelR * Math.cos(angle)).toFixed(2);
+		const ly = (cy + labelR * Math.sin(angle)).toFixed(2);
+		const cosA = Math.cos(angle);
+		const sinA = Math.sin(angle);
+		const anchor = cosA < -0.1 ? 'end' : cosA > 0.1 ? 'start' : 'middle';
+		const baseline = sinA < -0.3 ? 'auto' : sinA > 0.3 ? 'hanging' : 'middle';
+		svg += `<text x="${lx}" y="${ly}" font-size="11" font-weight="700" fill="${labelColor}" text-anchor="${anchor}" dominant-baseline="${baseline}" style="user-select:text;cursor:default;">${cat.icon} ${cat.short}</text>`;
 	  });
-
-	  ctx.font = 'bold 13px Inter';
-	  ctx.fillStyle = isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.3)';
-	  ctx.textAlign = 'center';
-	  ctx.textBaseline = 'top';
-	  ctx.fillText('Súlyossági Index (0–10)', cx, 8);
+	  svg += '</svg>';
+	  wrap.innerHTML = svg;
 	}
 
-	window.addEventListener('DOMContentLoaded', () => {
-	  buildBarChart();
-	  buildBubbleMatrix();
-
-	  const barView = document.getElementById('view-bar');
-	  if (barView && 'IntersectionObserver' in window) {
-		const obs = new IntersectionObserver(entries => {
-		  entries.forEach(e => {
-			if (e.isIntersecting && !barsAnimated) {
-			  animateBars();
-			  barsAnimated = true;
-			}
-		  });
-		}, { threshold: 0.3 });
-		obs.observe(barView);
-	  }
-
-	  const radarCanvas = document.getElementById('radar-canvas');
-	  if (radarCanvas) {
-		const w = Math.min(600, document.querySelector('.container').clientWidth - 40);
-		radarCanvas.width = w;
-		radarCanvas.height = Math.round(w * 0.7);
-	  }
-	});
-
-	const SURVEY_KEY = 'fityesz_survey_done';
+	// BETTER SURVEY SYSTEM W/O CHECKMARKS (2.1.3)
 	let surveyDone = false;
-	let selectedThemePref = null;
+	let selectedThemePref = localStorage.getItem('theme') || 'light';
 	document.addEventListener('DOMContentLoaded', function() {
-		if (localStorage.getItem(SURVEY_KEY) === 'true') {
-			var p = document.getElementById('survey-popup');
-			if (p) p.style.display = 'none';
-		} else {
-			var cur = localStorage.getItem('theme');
-			if (cur) {
-				selectedThemePref = cur;
-				var bd = document.getElementById('btn-dark');
-				var bl = document.getElementById('btn-light');
-				var bs = document.getElementById('btn-save');
-				if (bd && bl && bs) {
-					(cur === 'dark' ? bd : bl).classList.add('active');
-					bs.disabled = false;
-				}
-			}
+		setThemePref(localStorage.getItem('theme') === 'dark' ? 'dark' : 'light');
+		if (localStorage.getItem('surveyCompleted') === 'true') {
+			document.getElementById('survey-popup').style.display = 'none';
 		}
-		var ov = document.getElementById('fb-modal-overlay');
-		if (ov) ov.addEventListener('click', function(e){ if(e.target===this) closeFbModal(); });
 	});
-
 	function startSurvey() {
 		document.getElementById('survey-form').classList.add('visible');
 		document.querySelector('.btn-start').style.display = 'none';
 	}
 	function skipSurvey() {
 		document.getElementById('q1-section').style.display = 'none';
+		document.getElementById('top-divider').style.display = 'none';
 		surveyDone = true;
-		var bs = document.getElementById('btn-save');
-		if (bs) bs.disabled = (selectedThemePref === null);
+		document.getElementById('btn-save').disabled = false;
 	}
 	async function submitSurvey() {
 		var checked = Array.from(document.querySelectorAll('#q1-section input[type=checkbox]:checked')).map(function(c){return c.value;});
 		if (checked.length > 0) await incrementSheetDB(checked);
 		document.getElementById('q1-section').style.display = 'none';
+		document.getElementById('top-divider').style.display = 'none';
 		document.getElementById('q1-thanks').style.display = 'block';
 		surveyDone = true;
-		var bs = document.getElementById('btn-save');
-		if (bs) bs.disabled = (selectedThemePref === null);
+		document.getElementById('btn-save').disabled = false;
 	}
 	function setThemePref(theme) {
 		selectedThemePref = theme;
@@ -1026,13 +948,11 @@
 	}
 	function savePref() {
 		if (selectedThemePref) localStorage.setItem('theme', selectedThemePref);
-		if (surveyDone) {
-			localStorage.setItem(SURVEY_KEY, 'true');
-			var popup = document.getElementById('survey-popup');
-			popup.style.transition = 'opacity .4s ease';
-			popup.style.opacity = '0';
-			setTimeout(function(){ popup.style.display = 'none'; }, 420);
-		}
+		localStorage.setItem('surveyCompleted', 'true');
+		var popup = document.getElementById('survey-popup');
+		popup.style.transition = 'opacity .4s ease';
+		popup.style.opacity = '0';
+		setTimeout(function(){ popup.style.display = 'none'; }, 420);
 	}
 
 	async function incrementSheetDB(cols) {
@@ -1058,7 +978,6 @@
 			console.log('[SheetDB] PATCH:', await patchResp.json());
 		} catch(err) { console.error('[SheetDB]', err); }
 	}
-
 	function openSharePopup() {
 		document.getElementById('fb-modal-overlay').classList.remove('hidden');
 	}
@@ -1088,7 +1007,7 @@
 	<button class="btn-start" onclick="startSurvey()">Kezdés ▶</button>
   </div>
   <div id="survey-form" class="survey-form">
-	<hr class="survey-divider">
+	<hr class="survey-divider" id="top-divider">
 	<div id="q1-section">
 	  <p class="survey-q">Hogyan találtál erre a honlapra? <span style="font-weight:400;font-size:.88em;">(Többet is kiválaszthatsz!)</span></p>
 	  <div class="survey-checkboxes">
