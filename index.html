@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-	<!-- FITYESZ 2.1.6 (FINAL VERSION, UPDATED AT 2026. 04. 13.) /// © COPYRIGHT FITYESZ MOZGALOM (DO NOT DISTRIBUTE) -->
+	<!-- FITYESZ 2.1.7 (FINAL VERSION, UPDATED AT 2026. 04. 17.) /// © COPYRIGHT FITYESZ MOZGALOM (DO NOT DISTRIBUTE) -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="https://static.fityesz.hu/images/assets/fityesz.png">
@@ -453,7 +453,7 @@
 	<section id="ugyek">
 	  <h2>Milyen ügyekhez van köze a Fityesznek, amelyekkel tönkretették az országot?</h2>
 	  <div class="stats-bar">
-		<div class="stat-card"><div class="stat-number">28</div><div class="stat-label">feltárt ügy</div></div>
+		<div class="stat-card"><div class="stat-number">27</div><div class="stat-label">feltárt ügy</div></div>
 		<div class="stat-card"><div class="stat-number">9</div><div class="stat-label">kategória</div></div>
 		<div class="stat-card"><div class="stat-number">3</div><div class="stat-label">KRITIKUS szint</div></div>
 		<div class="stat-card"><div class="stat-number">16+</div><div class="stat-label">év rombolás</div></div>
@@ -808,7 +808,7 @@
 		setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
 	  }
 	}
-	/* FIXED AND IMPROVED RADAR OVERLAY (2.1.2) */
+	/* FIXED AND IMPROVED RADAR OVERLAY (2.1.7) */
 	function drawRadar() {
 	  const wrap = document.getElementById('radar-svg-wrap');
 	  if (!wrap) return;
@@ -819,13 +819,11 @@
 	  const R = (W - PAD * 2) / 2;
 	  const cx = W / 2, cy = W * 0.5 + 10;
 	  const H = cy + R + PAD + 10;
-	  const bgColor = isDark ? '#000' : '#fff';
-	  const gridColor = isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.1)';
+		  const gridColor = isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.1)';
 	  const labelColor = isDark ? '#bbb' : '#444';
 	  const rings = 5;
 	  let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" style="font-family:Inter,Segoe UI,sans-serif;overflow:visible;">`;
-	  svg += `<rect width="${W}" height="${H}" fill="${bgColor}"/>`;
-	  svg += `<text x="${cx}" y="18" text-anchor="middle" font-size="15" font-weight="700" fill="${isDark?'rgba(255,255,255,0.35)':'rgba(0,0,0,0.25)'}" letter-spacing="0.5">Súlyossági Index (0–10)</text>`;
+	  svg += `<text x="${cx}" y="18" text-anchor="middle" font-size="15" font-weight="700" fill="${isDark?'rgba(255,255,255,0.75)':'rgba(0,0,0,0.65)'}" letter-spacing="0.5">Súlyossági Index (0–10)</text>`;
 	  for (let ring = 1; ring <= rings; ring++) {
 		const r = R * ring / rings;
 		let pts = '';
@@ -859,7 +857,7 @@
 		const r = R * cat.severity / 10;
 		const x = (cx + r * Math.cos(angle)).toFixed(2);
 		const y = (cy + r * Math.sin(angle)).toFixed(2);
-		svg += `<circle cx="${x}" cy="${y}" r="5" fill="${cat.color}" stroke="${bgColor}" stroke-width="2"/>`;
+		svg += `<circle cx="${x}" cy="${y}" r="5" fill="${cat.color}" stroke="${isDark?'#000':'#fff'}" stroke-width="2"/>`;
 	  });
 	  chartData.forEach((cat, i) => {
 		const angle = (i / n) * Math.PI * 2 - Math.PI / 2;
