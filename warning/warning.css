@@ -2,8 +2,8 @@
 
 #fityesz-archive-banner {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 12px;
+  right: 12px;
   background: #ffffff;
   color: #FF6600;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -27,6 +27,21 @@
   background: #FF6600;
   border-radius: 50%;
   padding: 0;
+}
+@media (max-width: 600px) {
+  #fityesz-archive-banner {
+    top: 10px;
+    right: 10px;
+    max-width: calc(100vw - 20px);
+    height: 52px;
+    font-size: 11px;
+  }
+
+  #fityesz-archive-banner.collapsed {
+    width: 44px;
+    height: 44px;
+    max-width: 44px;
+  }
 }
 #fityesz-archive-banner.collapsed .fityesz-content {
   display: none;
