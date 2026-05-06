@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-	<!-- FITYESZ 2.1.8 (FINAL VERSION, UPDATED AT 2026. 04. 22.) /// © COPYRIGHT FITYESZ MOZGALOM (DO NOT DISTRIBUTE) -->
+	<!-- FITYESZ 2.1.9 (FINAL VERSION, UPDATED AT 2026. 05. 07.) /// © COPYRIGHT FITYESZ MOZGALOM (DO NOT DISTRIBUTE) -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="https://static.fityesz.hu/images/assets/fityesz.png">
@@ -100,7 +100,6 @@
 		}
 		.orange-divider { border: none; border-bottom: 3px solid #ff6600; margin: 30px 0; width: 100%; }
 		.highlight { font-weight: bold; color: #000; }
-		
 		#theme-toggle {
 		  position: fixed;
 		  top: 20px;
@@ -194,7 +193,6 @@
 		  transition: color .4s ease;
 		}
 		body.dark-mode .countdown-text { color: #bbb; }
-
 		.stats-bar { display: flex; gap: 10px; margin-bottom: 22px; flex-wrap: wrap; }
 		.stat-card { flex: 1; min-width: 90px; background: #f9f9f9; border: 1px solid #eee; border-radius: 12px; padding: 14px 10px; text-align: center; transition: all .2s; }
 		body.dark-mode .stat-card { background: #111; border-color: #333; }
@@ -238,7 +236,6 @@
 		body.dark-mode .list-item { border-bottom-color: #222; }
 		.orange-icon { margin-right: 10px; flex-shrink: 0; font-size: 1.1em; line-height: 1.5; }
 		.cc-1{border-left:4px solid #dc2626!important;} .cc-2{border-left:4px solid #ea580c!important;} .cc-3{border-left:4px solid #1d4ed8!important;} .cc-4{border-left:4px solid #7c3aed!important;} .cc-5{border-left:4px solid #059669!important;} .cc-6{border-left:4px solid #ca8a04!important;} .cc-7{border-left:4px solid #b45309!important;} .cc-8{border-left:4px solid #991b1b!important;} .cc-9{border-left:4px solid #475569!important;}
-
 		/* CHART SECTION STYLES */
 		.chart-intro { font-size: .95em; color: #555; margin-bottom: 22px; line-height: 1.65; }
 		body.dark-mode .chart-intro { color: #aaa; }
@@ -417,6 +414,69 @@
 		  .btn-results:active {
 			transform: translateY(0);
 		  }
+	
+		/* "ADD TOVÁBB" SECTION (2.1.9) */
+		.add-tovabb-section { padding: 0px 0 10px 0; }
+		.add-tovabb-intro-box { background: linear-gradient(135deg, rgba(255, 102, 0, 0.08), rgba(255, 102, 0, 0.02)); border: 1px solid rgba(255, 102, 0, 0.2); border-radius: 14px; padding: 18px 20px; text-align: center; margin-bottom: 15px; transition: all 0.3s ease; } body.dark-mode
+		.add-tovabb-intro-box { background: linear-gradient(135deg, rgba(255, 102, 0, 0.12), rgba(255, 102, 0, 0.03)); border-color: rgba(255, 102, 0, 0.3); }
+		.add-tovabb-intro-text { font-size: 1.02em; color: #444; margin: 0 0 14px 0; line-height: 1.5; } body.dark-mode
+		.add-tovabb-intro-text { color: #ccc; }
+		.btn-toggle-tovabb { background-color: #ff6600; color: #fff; border: none; border-radius: 24px; padding: 10px 24px; font-size: 0.95em; font-weight: 700; cursor: pointer; transition: all 0.25s ease; box-shadow: 0 4px 10px rgba(255, 102, 0, 0.2); display: inline-flex; align-items: center; gap: 8px; }
+		.btn-toggle-tovabb:hover { background-color: #e55a00; transform: translateY(-1px); box-shadow: 0 6px 15px rgba(255, 102, 0, 0.3); }
+		.btn-toggle-tovabb:active { transform: translateY(1px); }
+		.btn-toggle-tovabb .toggle-arrow { font-size: 0.85em; transition: transform 0.3s ease; } .btn-toggle-tovabb.open .toggle-arrow { transform: rotate(180deg); }
+		.add-tovabb-collapse-container { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0, 1, 0, 1); }
+		.add-tovabb-collapse-container.open { max-height: 4000px; transition: max-height 1.2s ease-in-out; margin-top: 15px; }
+		.add-tovabb-section h2 { color: #d32f2f; font-size: 1.4em; margin-top: 0; margin-bottom: 20px; line-height: 1.2; font-weight: 800; }
+		.add-tovabb-images { display: flex; gap: 16px; flex-wrap: wrap; }
+		.add-tovabb-card { flex: 1 1 100%; max-width: 100%; background: #f9f9f9; border: 1px solid #eee; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; margin-bottom: 20px; }
+		body.dark-mode .add-tovabb-card { background: #111; border-color: #333; }
+		.add-tovabb-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.10); }
+		body.dark-mode .add-tovabb-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.4); }
+		.add-tovabb-card img { width: 100%; height: auto; object-fit: cover; display: block; }
+		.add-tovabb-card-actions { display: flex; gap: 8px; padding: 12px 14px 8px; flex-wrap: wrap; }
+		.btn-img-action { flex: 1; min-width: 100px; padding: 9px 10px; font-size: .82em; font-weight: 700; border: none; border-radius: 20px; cursor: pointer; transition: background .2s, transform .15s; white-space: nowrap; text-align: center; display: flex; align-items: center; justify-content: center; gap: 5px; }
+		.btn-img-copy { background: #ff6600; color: #fff; }
+		.btn-img-copy:hover { background: #e55a00; }
+		.btn-img-download { background: #f0f0f0; color: #333; }
+		body.dark-mode .btn-img-download { background: #2a2a2a; color: #ddd; }
+		.btn-img-download:hover { background: #e0e0e0; }
+		body.dark-mode .btn-img-download:hover { background: #383838; }
+		.btn-img-action:active { transform: scale(.97); }
+		.add-tovabb-fb-row { display: flex; align-items: center; gap: 12px; padding: 4px 14px 14px; flex-wrap: wrap; }
+		.add-tovabb-fb-label { font-size: 16px; font-weight: 600; color: #555; }
+		body.dark-mode .add-tovabb-fb-label { color: #aaa; }
+		.btn-fb-share-at { background: none; border: none; cursor: pointer; padding: 2px; transition: transform .2s; display: flex; align-items: center; }
+		.btn-fb-share-at:hover { transform: scale(1.1); }
+		.btn-fb-share-at img { width: 36px; height: 36px; border-radius: 8px; display: block; }
+		/* FACEBOOK MODAL (2.1.9) */
+		.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;}
+		.modal-overlay.hidden{display:none;}
+		.modal-box{background:#fff;border-radius:16px;padding:32px 26px 22px;max-width:500px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.4);font-family:'Inter','Segoe UI',sans-serif;position:relative;}
+		body.dark-mode .modal-box{background:#1a1a1a;color:#e0e0e0;}
+		.modal-close-x{position:absolute;top:10px;right:14px;background:none;border:none;font-size:1.6em;line-height:1;color:#aaa;cursor:pointer;padding:2px 8px;border-radius:6px;transition:color .2s,background .2s;z-index:10;}
+		.modal-close-x:hover{color:#333;background:#f0f0f0;}
+		body.dark-mode .modal-close-x{color:#666;}
+		body.dark-mode .modal-close-x:hover{color:#eee;background:#2a2a2a;}
+		.modal-box h3{margin:0 0 14px;font-size:1.15em;color:#222;font-weight:800;line-height:1.3;}
+		body.dark-mode .modal-box h3{color:#fff;}
+		.modal-box p{font-size:.93em;color:#444;margin-bottom:10px;}
+		body.dark-mode .modal-box p{color:#bbb;}
+		.copy-block{background:#fff8f2;border:1px solid #ffcc99;border-radius:10px;padding:14px 16px;margin-bottom:14px;display:flex;flex-direction:column;gap:10px;}
+		body.dark-mode .copy-block{background:#2a1a00;border-color:#994400;}
+		.copy-block-text{font-size:.9em;color:#333;line-height:1.6;}
+		body.dark-mode .copy-block-text{color:#ddd;}
+		.btn-copy{align-self:flex-end;background:#ff6600;color:#fff;border:none;border-radius:14px;padding:7px 18px;font-size:.85em;font-weight:700;cursor:pointer;transition:background .2s;}
+		.btn-copy:hover{background:#e55a00;}
+		.modal-open-row{margin:12px 0;font-size:.93em;color:#444;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+		body.dark-mode .modal-open-row{color:#bbb;}
+		.btn-fb-open{background:#1877f2;color:#fff;border:none;border-radius:14px;padding:7px 18px;font-size:.9em;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s;}
+		.btn-fb-open:hover{background:#1260c9;}
+		.btn-kozzetettem{width:100%;margin-top:10px;background:#ff6600;color:#fff;border:none;border-radius:20px;padding:11px;font-size:.97em;font-weight:800;cursor:pointer;transition:background .2s;}
+		.btn-kozzetettem:hover{background:#e55a00;}
+		.modal-thanks{text-align:center;font-size:.95em;font-weight:600;color:#ff6600;margin-top:10px;display:none;}
+		body.dark-mode .modal-thanks{color:#ff8533;}
+		@media (max-width:450px) { .add-tovabb-images { flex-direction: column; } .add-tovabb-card { min-width: 0; } }
 	</style>
 	<!-- FONTING SYSTEM -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -687,6 +747,63 @@
 		<div class="sev-item"><div class="sev-dot" style="background:#991b1b"></div> Gyűlölet</div>
 		<div class="sev-item"><div class="sev-dot" style="background:#475569"></div> Infrastruktúra</div>
 	  </div>
+	
+<div class="orange-divider"></div>
+	<section class="add-tovabb-section">
+		<h2>ADD TOVÁBB!</h2>
+		
+		<div class="add-tovabb-intro-box">
+			<p class="add-tovabb-intro-text"><b>Szeretnéd te is terjeszteni az igazságot?</b><br>Töltsd le vagy másold ki az alábbi egyedi plakátjainkat, és továbbítsd vagy oszd meg őket Facebookon!</p>
+			<button class="btn-toggle-tovabb" id="tovabb-trigger" onclick="toggleAddTovabb()">
+				Plakátok megtekintése <span class="toggle-arrow">▼</span>
+			</button>
+		</div>
+
+		<div class="add-tovabb-collapse-container" id="tovabb-container">
+			<div class="add-tovabb-images">
+				<div class="add-tovabb-card">
+					<img src="https://static.fityesz.hu/images/assets/add-tovabb1.png" alt="Add Tovább 1. kép" loading="lazy" id="at-img-1" crossorigin="anonymous">
+					<div class="add-tovabb-card-actions">
+						<button class="btn-img-action btn-img-copy" onclick="copyImage('https://static.fityesz.hu/images/assets/add-tovabb1.png', this)">
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+							Kép másolása
+						</button>
+						<button class="btn-img-action btn-img-download" onclick="downloadImage('https://static.fityesz.hu/images/assets/add-tovabb1.png', 'add-tovabb1.png')">
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+							Kép letöltése
+						</button>
+					</div>
+					<div class="add-tovabb-fb-row">
+						<span class="add-tovabb-fb-label">Oszd meg Facebookon:</span>
+						<button class="btn-fb-share-at" onclick="openFbShareModal('at1')" aria-label="Megosztás Facebookon">
+							<img src="https://static.fityesz.hu/images/assets/social-media/facebook-logo-svg.png" alt="Facebook Share">
+						</button>
+					</div>
+				</div>
+
+				<div class="add-tovabb-card">
+					<img src="https://static.fityesz.hu/images/assets/add-tovabb2.png" alt="Add Tovább 2. kép" loading="lazy" id="at-img-2" crossorigin="anonymous">
+					<div class="add-tovabb-card-actions">
+						<button class="btn-img-action btn-img-copy" onclick="copyImage('https://static.fityesz.hu/images/assets/add-tovabb2.png', this)">
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+							Kép másolása
+						</button>
+						<button class="btn-img-action btn-img-download" onclick="downloadImage('https://static.fityesz.hu/images/assets/add-tovabb2.png', 'add-tovabb2.png')">
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+							Kép letöltése
+						</button>
+					</div>
+					<div class="add-tovabb-fb-row">
+						<span class="add-tovabb-fb-label">Oszd meg Facebookon:</span>
+						<button class="btn-fb-share-at" onclick="openFbShareModal('at2')" aria-label="Megosztás Facebookon">
+							<img src="https://static.fityesz.hu/images/assets/social-media/facebook-logo-svg.png" alt="Facebook Share">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	</section>
 	<div class="orange-divider"></div>
 	<a href="https://fityesz.hu" target="_self">
@@ -696,7 +813,7 @@
 	<p style="text-align:center;font-size:11px;"><i><b>Ez az oldal párthovatartozástól és külső anyagi támogatástól független. Kizárólag magánvéleményt tükröz, és hobbiprojektként jött létre az állampárttal szembeni kritikai hangvétel és a véleménynyilvánítás szabadsága jegyében.<br>A honlap fejlesztőiként továbbra is a kormány- és rendszerváltást támogatjuk.</b><br><br>Kapcsolati megkeresések esetén:<br>hivatalos@fityesz.hu</i></p>
 	<div style="text-align: center; margin: 10px;">
 	<!-- Archived versions added (2.1.6) -->
-    <a href="https://fityesz.hu/archive-versions" target="_self" style="color: #666; font-family: sans-serif; font-size: 11px; text-decoration: underline; letter-spacing: 0.5px; transition: color 0.3s ease;">Archivált verziók megtekintése</a>
+    <a href="https://fityesz.hu/archive-versions" target="_self" style="color: #666; font-family: sans-serif; font-size: 11px; text-decoration: underline; letter-spacing: 0.5px; transition: color 0.3s ease;">Fityesz-archívum megtekintése</a>
 </div>
   </div>
 </div>
@@ -731,7 +848,6 @@
 	  document.getElementById('btn-light').classList.toggle('active', !dark);
 	  if (currentChart === 'radar') drawRadar();
 	});
-
 	// CATEGORY TOGGLE & NAV
 	function toggleCategory(card) {
 	  card.classList.toggle('open');
@@ -821,7 +937,7 @@
 	  const R = (W - PAD * 2) / 2;
 	  const cx = W / 2, cy = W * 0.5 + 10;
 	  const H = cy + R + PAD + 10;
-		  const gridColor = isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.1)';
+	  const gridColor = isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.1)';
 	  const labelColor = isDark ? '#bbb' : '#444';
 	  const rings = 5;
 	  let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" style="font-family:Inter,Segoe UI,sans-serif;overflow:visible;">`;
@@ -875,7 +991,6 @@
 	  svg += '</svg>';
 	  wrap.innerHTML = svg;
 	}
-
 	// BETTER SURVEY SYSTEM W/O CHECKMARKS (2.1.3)
 	let surveyDone = false;
 	let selectedThemePref = localStorage.getItem('theme') || 'light';
@@ -937,7 +1052,6 @@
 		popup.style.opacity = '0';
 		setTimeout(function(){ popup.style.display = 'none'; }, 420);
 	}
-
 	async function incrementSheetDB(cols) {
 		var base = 'https://sheetdb.io/api/v1/b3qjenikhlqwp';
 		try {
@@ -960,6 +1074,66 @@
 			});
 			console.log('[SheetDB] PATCH:', await patchResp.json());
 		} catch(err) { console.error('[SheetDB]', err); }
+	}
+	// FACEBOOK "ADD TOVÁBB" MODAL (2.1.9)
+	async function copyImage(url, btn) {
+		try {
+			const resp = await fetch(url);
+			const blob = await resp.blob();
+			await navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
+			btn.textContent = '✓ Másolva!';
+			setTimeout(() => { btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Kép másolása'; }, 2000);
+		} catch(e) {
+			btn.textContent = '⚠ Nem sikerült';
+			setTimeout(() => { btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Kép másolása'; }, 2000);
+		}
+	}
+	function downloadImage(url, filename) {
+		fetch(url)
+			.then(r => r.blob())
+			.then(blob => {
+				const a = document.createElement('a');
+				a.href = URL.createObjectURL(blob);
+				a.download = filename;
+				document.body.appendChild(a);
+				a.click();
+				document.body.removeChild(a);
+				setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+			});
+	}
+	// FACEBOOK "ADD TOVÁBB" MODAL (2.1.9)
+	function openFbShareModal(id) {
+		document.getElementById('fb-modal-' + id).classList.remove('hidden');
+	}
+	function closeFbModal(id) {
+		document.getElementById('fb-modal-' + id).classList.add('hidden');
+	}
+	function copyShareText(id, btn) {
+		var txt = document.getElementById('share-text-' + id).textContent;
+		navigator.clipboard.writeText(txt).catch(function(){
+			var el = document.createElement('textarea');
+			el.value = txt; document.body.appendChild(el); el.select(); document.execCommand('copy'); document.body.removeChild(el);
+		});
+		btn.textContent = '✓ Másolva';
+		setTimeout(function(){ btn.textContent = 'Másolás'; }, 2000);
+	}
+	function handleKozzetettemAt(id) {
+		document.getElementById('fb-modal-' + id).querySelectorAll('.btn-kozzetettem').forEach(b => b.style.display = 'none');
+		document.getElementById('modal-thanks-' + id).style.display = 'block';
+		setTimeout(function(){ closeFbModal(id); document.getElementById('modal-thanks-' + id).style.display = 'none'; document.getElementById('fb-modal-' + id).querySelectorAll('.btn-kozzetettem').forEach(b => b.style.display = ''); }, 2800);
+	}
+	function toggleAddTovabb() {
+		var container = document.getElementById('tovabb-container');
+		var trigger = document.getElementById('tovabb-trigger');
+		if (container.classList.contains('open')) {
+			container.classList.remove('open');
+			trigger.classList.remove('open');
+			trigger.innerHTML = 'Plakátok megtekintése <span class="toggle-arrow">▼</span>';
+		} else {
+			container.classList.add('open');
+			trigger.classList.add('open');
+			trigger.innerHTML = 'Plakátok bezárása <span class="toggle-arrow">▲</span>';
+		}
 	}
 </script>
 <div id="survey-popup" class="survey-popup">
@@ -994,6 +1168,48 @@
 	  </div>
 	  <button class="btn-save" id="btn-save" onclick="savePref()" disabled>Mentés</button>
 	</div>
+  </div>
+</div>
+<!-- FACEBOOK SHARE MODAL – "Add Tovább" 1 -->
+<div id="fb-modal-at1" class="modal-overlay hidden" onclick="if(event.target===this)closeFbModal('at1')">
+  <div class="modal-box">
+	<button class="modal-close-x" onclick="closeFbModal('at1')" aria-label="Bezárás">&#215;</button>
+	<h3>Terjeszd a valóságot Facebookon!</h3>
+	<p>Másold ki ezt a szöveget:</p>
+	<div class="copy-block">
+	  <span class="copy-block-text" id="share-text-at1">A Fityesz–KDNP teljesen összeomlott a vereség után, és én már elolvastam a Fityesz-oldalon, hogy milyen borzalmas rendszerre bíztuk az ország 16 éves kormányzását! Olvasd el te is!</span>
+	  <button class="btn-copy" onclick="copyShareText('at1', this)">Másolás</button>
+	</div>
+	<p>Majd illeszd be a Facebookba, és nyomd meg a <b>„Küldés"</b> gombot! A rendszer a linket automatikusan beilleszti.</p>
+	<div class="modal-open-row">
+	  <span>Kimásoltad? Facebook megnyitása:</span>
+	  <a href="https://www.facebook.com/sharer/sharer.php?u=https://fityesz.hu/embeds/add-tovabb1"
+		 onclick="var w=600,h=500,l=Math.round((screen.width-w)/2),t=Math.round((screen.height-h)/2);window.open(this.href,'newwindow','width='+w+',height='+h+',left='+l+',top='+t+',resizable=yes');return false;"
+		 class="btn-fb-open" target="_blank" rel="noopener noreferrer">Megnyitás</a>
+	</div>
+	<button class="btn-kozzetettem" onclick="handleKozzetettemAt('at1')">Közzétettem</button>
+	<div class="modal-thanks" id="modal-thanks-at1">Köszönjük szépen a promóciót!</div>
+  </div>
+</div>
+<!-- FACEBOOK SHARE MODAL – "Add Tovább" 2 -->
+<div id="fb-modal-at2" class="modal-overlay hidden" onclick="if(event.target===this)closeFbModal('at2')">
+  <div class="modal-box">
+	<button class="modal-close-x" onclick="closeFbModal('at2')" aria-label="Bezárás">&#215;</button>
+	<h3>Terjeszd a valóságot Facebookon!</h3>
+	<p>Másold ki ezt a szöveget:</p>
+	<div class="copy-block">
+	  <span class="copy-block-text" id="share-text-at2">A Fityesz–KDNP teljesen összeomlott a vereség után, és én már elolvastam a Fityesz-oldalon, hogy milyen borzalmas rendszerre bíztuk az ország 16 éves kormányzását! Olvasd el te is!</span>
+	  <button class="btn-copy" onclick="copyShareText('at2', this)">Másolás</button>
+	</div>
+	<p>Majd illeszd be a Facebookba, és nyomd meg a <b>„Küldés"</b> gombot! A rendszer a linket automatikusan beilleszti.</p>
+	<div class="modal-open-row">
+	  <span>Kimásoltad? Facebook megnyitása:</span>
+	  <a href="https://www.facebook.com/sharer/sharer.php?u=https://fityesz.hu/embeds/add-tovabb2"
+		 onclick="var w=600,h=500,l=Math.round((screen.width-w)/2),t=Math.round((screen.height-h)/2);window.open(this.href,'newwindow','width='+w+',height='+h+',left='+l+',top='+t+',resizable=yes');return false;"
+		 class="btn-fb-open" target="_blank" rel="noopener noreferrer">Megnyitás</a>
+	</div>
+	<button class="btn-kozzetettem" onclick="handleKozzetettemAt('at2')">Közzétettem</button>
+	<div class="modal-thanks" id="modal-thanks-at2">Köszönjük szépen a promóciót!</div>
   </div>
 </div>
 </body>
