@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-	<!-- FITYESZ 2.2.1 (FINAL VERSION, UPDATED AT 2026. 05. 08.) /// © COPYRIGHT FITYESZ MOZGALOM (DO NOT DISTRIBUTE) -->
+	<!-- FITYESZ 2.2.2 (UPDATED AT 2026. 06. 06.) /// © COPYRIGHT FITYESZ MOZGALOM (DO NOT DISTRIBUTE) -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="https://static.fityesz.hu/images/assets/fityesz.png">
@@ -837,6 +837,27 @@
 						</button>
 					</div>
 				</div>
+				<!-- "Add Tovább" // Picture 4 -->
+				<div class="add-tovabb-card">
+					<img src="https://static.fityesz.hu/images/assets/add-tovabb4.png" alt="Add Tovább 4. kép" loading="lazy" id="at-img-3" crossorigin="anonymous">
+					<div class="add-tovabb-card-actions">
+						<button class="btn-img-action btn-img-copy" onclick="copyImage('https://static.fityesz.hu/images/assets/add-tovabb4.png', this)">
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+							Kép másolása
+						</button>
+						<button class="btn-img-action btn-img-download" onclick="downloadImage('https://static.fityesz.hu/images/assets/add-tovabb4.png', 'add-tovabb4.png')">
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+							Kép letöltése
+						</button>
+					</div>
+					<!-- "Add Tovább" // Picture 4 - Facebook sharing -->
+					<div class="add-tovabb-fb-row">
+						<span class="add-tovabb-fb-label">Oszd meg Facebookon:</span>
+						<button class="btn-fb-share-at" onclick="openFbShareModal('at4')" aria-label="Megosztás Facebookon">
+							<img src="https://static.fityesz.hu/images/assets/social-media/facebook-logo-svg.png" alt="Facebook Share">
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -847,7 +868,7 @@
 	<img src="https://static.fityesz.hu/images/assets/fityesz-mozgalom.png" alt="Fityesz Mozgalom Logó" width="225px" height="120px" class="fityesz-logo">
 	</a>
 	<div class="orange-divider"></div>
-	<p style="text-align:center;font-size:11px;"><i><b>Ez az oldal párthovatartozástól és külső anyagi támogatástól független. Kizárólag magánvéleményt tükröz, és hobbiprojektként jött létre az állampárttal szembeni kritikai hangvétel és a véleménynyilvánítás szabadsága jegyében.<br>A honlap fejlesztőiként továbbra is a kormány- és rendszerváltást támogatjuk.</b><br><br>Kapcsolati megkeresések esetén:<br>hivatalos@fityesz.hu</i></p>
+	<p style="text-align:center;font-size:11px;"><i><b>Ez az oldal párthovatartozástól és külső anyagi támogatástól független. Kizárólag magánvéleményt tükröz, és hobbiprojektként jött létre a volt kormánypárt szembeni kritikai hangvétele és a véleménynyilvánítás szabadsága jegyében.<br>A honlap fejlesztőiként továbbra is az Orbán-rendszer teljes lezárását támogatjuk.</b><br><br>Kapcsolati megkeresések esetén:<br>hivatalos@fityesz.hu</i></p>
 	<div style="text-align: center; margin: 10px;">
 	<!-- Archive added (2.1.6) -->
     <a href="https://fityesz.hu/archive" target="_self" style="color: #666; font-family: sans-serif; font-size: 11px; text-decoration: underline; letter-spacing: 0.5px; transition: color 0.3s ease;">Fityesz-archívum megtekintése</a>
@@ -1268,6 +1289,27 @@
 	</div>
 	<button class="btn-kozzetettem" onclick="handleKozzetettemAt('at3')">Közzétettem</button>
 	<div class="modal-thanks" id="modal-thanks-at3">Köszönjük szépen a promóciót!</div>
+  </div>
+</div>
+<!-- FACEBOOK SHARE MODAL – "Add Tovább" 4 -->
+<div id="fb-modal-at4" class="modal-overlay hidden" onclick="if(event.target===this)closeFbModal('at4')">
+  <div class="modal-box">
+	<button class="modal-close-x" onclick="closeFbModal('at4')" aria-label="Bezárás">&#215;</button>
+	<h3>Terjeszd a valóságot Facebookon!</h3>
+	<p>Másold ki ezt a szöveget:</p>
+	<div class="copy-block">
+	  <span class="copy-block-text" id="share-text-at4">A Fityesz–KDNP teljesen összeomlott a vereség után, és én már elolvastam a Fityesz-oldalon, hogy milyen egy borzalmas rendszerre bíztuk az ország 16 éves kormányzását! Olvasd el te is!</span>
+	  <button class="btn-copy" onclick="copyShareText('at4', this)">Másolás</button>
+	</div>
+	<p>Majd illeszd be a Facebookba, és nyomd meg a <b>„Küldés"</b> gombot! A rendszer a linket automatikusan beilleszti.</p>
+	<div class="modal-open-row">
+	  <span>Kimásoltad? Facebook megnyitása:</span>
+	  <a href="https://www.facebook.com/sharer/sharer.php?u=https://fityesz.hu/embeds/add-tovabb4"
+		 onclick="var w=600,h=500,l=Math.round((screen.width-w)/2),t=Math.round((screen.height-h)/2);window.open(this.href,'newwindow','width='+w+',height='+h+',left='+l+',top='+t+',resizable=yes');return false;"
+		 class="btn-fb-open" target="_blank" rel="noopener noreferrer">Megnyitás</a>
+	</div>
+	<button class="btn-kozzetettem" onclick="handleKozzetettemAt('at4')">Közzétettem</button>
+	<div class="modal-thanks" id="modal-thanks-at4">Köszönjük szépen a promóciót!</div>
   </div>
 </div>
 </body>
