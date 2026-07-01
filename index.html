@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-	<!-- FITYESZ 2.2.5 (UPDATED AT 2026. 06. 28.) /// FITYESZ.HU /// © COPYRIGHT FITYESZ MOZGALOM (DO NOT DISTRIBUTE) -->
+	<!-- FITYESZ 2.2.6 (UPDATED AT 2026. 07. 01.) /// FITYESZ.HU /// © COPYRIGHT FITYESZ MOZGALOM (DO NOT DISTRIBUTE) -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="https://static.fityesz.hu/images/assets/fityesz.png">
@@ -493,7 +493,131 @@
     .add-tovabb-images { gap: 24px; }
 		.add-tovabb-card { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
 		body.dark-mode .add-tovabb-card { box-shadow: 0 2px 16px rgba(0,0,0,0.35); }
-		</style>
+		
+		/* HÍRPORTÁL ADDITION (2.2.6) */
+		.hirportal-promo {
+      margin-bottom: 20px;
+		  padding: 22px 20px;
+		  background: linear-gradient(135deg, #fff7f0 0%, #fff 100%);
+		  border: 1px solid #ffe0c2;
+		  border-radius: 18px;
+		  text-align: center;
+		}
+		body.dark-mode .hirportal-promo {
+		  background: linear-gradient(135deg, #1a1208 0%, #111 100%);
+		  border-color: #3a2712;
+		}
+		.hirportal-promo-title {
+		  font-size: 1.15em;
+		  font-weight: 800;
+		  color: #ff6600;
+		  margin: 0 0 8px;
+		  letter-spacing: .3px;
+		}
+    .hirportal-promo-kozlemeny {
+      font-size: 17px;
+      font-weight: 800;
+      color: #ff6600;
+      margin: 0 0 8px;
+      letter-spacing: .3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      animation: kozlemeny-pulse 3.2s ease-in-out infinite;
+    }
+    .hirportal-promo-kozlemeny::before {
+      content: '';
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #ff3d00;
+      box-shadow: 0 0 0 rgba(255,61,0,.6);
+      animation: kozlemeny-dot 3.2s ease-in-out infinite;
+    }
+    @keyframes kozlemeny-pulse {
+      0%, 100% {
+        text-shadow: 0 0 0 rgba(255,102,0,0);
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 6px rgba(255,102,0,.3);
+        transform: scale(1.01);
+      }
+    }
+    @keyframes kozlemeny-dot {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255,61,0,.5);
+        background: #ff3d00;
+      }
+      70% {
+        box-shadow: 0 0 0 5px rgba(255,61,0,0);
+        background: #ff6600;
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255,61,0,0);
+        background: #ff3d00;
+      }
+    }
+
+    body.dark-mode .hirportal-promo-kozlemeny::before{
+      background:#ff6600;
+    }
+		.hirportal-promo-text {
+		  font-size: .97em;
+		  color: #444;
+		  margin: 0 0 18px;
+		  line-height: 1.55;
+		}
+		body.dark-mode .hirportal-promo-text { color: #ccc; }
+		.btn-hirportal {
+		  display: inline-flex;
+		  align-items: center;
+		  gap: 10px;
+		  text-decoration: none;
+		  background: linear-gradient(135deg, #ff6600 0%, #ff8c1a 50%, #ff6600 100%);
+		  background-size: 200% 200%;
+		  color: #fff;
+		  font-weight: 800;
+		  font-size: .95em;
+		  letter-spacing: .5px;
+		  text-transform: uppercase;
+		  padding: 13px 26px;
+		  border-radius: 16px;
+		  box-shadow: 0 6px 18px rgba(255,102,0,.35);
+		  transition: background-position .5s ease, transform .2s ease, box-shadow .3s ease;
+		}
+		.btn-hirportal:hover {
+		  background-position: 100% 50%;
+		  transform: translateY(-2px);
+		  box-shadow: 0 10px 24px rgba(255,102,0,.45);
+		}
+		.btn-hirportal:active { transform: translateY(0); }
+		.btn-hirportal svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+		.hirportal-socials {
+		  display: flex;
+		  justify-content: center;
+		  gap: 16px;
+		  margin-top: 18px;
+		}
+		.hirportal-social-link {
+		  display: inline-flex;
+		  align-items: center;
+		  justify-content: center;
+		  width: 46px;
+		  height: 46px;
+		  border-radius: 50%;
+		  background: #f5f5f5;
+		  overflow: hidden;
+		  transition: transform .2s ease, box-shadow .25s ease;
+		}
+		body.dark-mode .hirportal-social-link { background: #222; }
+		.hirportal-social-link:hover {
+		  transform: translateY(-3px);
+		  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+		}
+		.hirportal-social-link img { width: 100%; height: 100%; display: block; object-fit: cover; }
+</style>
 	<!-- FONTING SYSTEM -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -508,6 +632,23 @@
 <div class="container">
 	<div class="header-image-wrapper"><img src="https://static.fityesz.hu/images/assets/fityesz-megfizetnek.png" alt="Fityesz kép" class="header-image"></div>
 	<div class="content">
+	<div class="hirportal-promo">
+    <div class="hirportal-promo-kozlemeny">FRISS KÖZLEMÉNY • 2026. JÚLIUS</div>
+		<div class="hirportal-promo-title">FITYESZ HÍRPORTÁL:<br>Tekintsd meg a hivatalos hírportálunkat!</div>
+		<p class="hirportal-promo-text">Kövesd nyomon a legfrissebb közéleti híreket, videóinkat és bejegyzéseinket egy helyen a hivatalos hírportálunkon.</p>
+		<a href="https://hirportal.fityesz.hu" target="_self" class="btn-hirportal" rel="noopener">
+			<svg viewBox="0 0 24 24"><path d="M4 11h16v2H4v-2zm0-4h16v2H4V7zm0 8h16v2H4v-2zm0 4h10v2H4v-2z"/></svg>
+			Hírportál megnyitása
+		</a>
+		<div class="hirportal-socials">
+			<a href="https://www.youtube.com/@FityeszMozgalom" target="_blank" rel="noopener" class="hirportal-social-link" aria-label="YouTube">
+				<img src="https://static.fityesz.hu/images/assets/social-media/youtube-logo.png" alt="YouTube">
+			</a>
+			<a href="https://www.facebook.com/FityeszMozgalom" target="_blank" rel="noopener" class="hirportal-social-link" aria-label="Facebook">
+				<img src="https://static.fityesz.hu/images/assets/social-media/facebook-logo.png" alt="Facebook">
+			</a>
+		</div>
+	</div>
 		<div class="countdown-banner">
 			<div class="countdown-text"><b>A Tisztelet és Szabadság Párt hatalmas kétharmados győzelmet aratott a Fityesszel szemben.</b><br><br></div>
 			<div class="countdown-text">Gratulálunk a TISZA Pártnak és Magyar Péteréknek.<br>Ez a weboldal most már egy gyűjteményi archívumként működik.<br></div>
@@ -516,6 +657,8 @@
 			<p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1.1em; margin-bottom: 15px;">Itt nézheted meg a választási eredményeket:</p>
 			<a href="https://vtr.valasztas.hu/ogy2026" target="_self" class="btn-results" style="display: inline-block; text-decoration: none;">2026-os eredmények</a>
 		</div>
+
+
 	<p><b>A Fiatal Demokraták Szövetsége már nem az a pártrendszer, amiben most az épeszű honfitársaink megbíznának. 16 év után már mindannyian tudjuk: ennek a vergődő hatalomnak mennie kell.</b></p>
 	<p>Ezért nevezhetnénk ezt a rendszert már inkább Fityesznek, reflektálva az összeomló magyar közszolgáltatásokra és a régóta tartó korrupcióra.</p>
 	<p>De akkor miért is a Fityesz? Mert ez már nem kormányzás, hanem csak játék a sorsunkkal.</p>
@@ -908,13 +1051,13 @@
 	</section>
 	<div class="orange-divider"></div>
 	<a href="https://fityesz.hu" target="_self">
-	<img src="https://static.fityesz.hu/images/assets/fityesz-mozgalom.png" alt="Fityesz Mozgalom Logó" width="225px" height="120px" class="fityesz-logo">
+	<img src="https://static.fityesz.hu/images/assets/fityesz-mozgalom.png" alt="Fityesz Mozgalom Logó" width="250px" height="120px" class="fityesz-logo">
 	</a>
 	<div class="orange-divider"></div>
 	<p style="text-align:center;font-size:11px;"><i><b>Ez az oldal párthovatartozástól és külső anyagi támogatástól független. Kizárólag magánvéleményt tükröz, és hobbiprojektként jött létre a volt kormánypárt szembeni kritikai hangvétele és a véleménynyilvánítás szabadsága jegyében.<br>A honlap fejlesztőiként továbbra is az Orbán-rendszer teljes lezárását támogatjuk.</b><br><br>Kapcsolati megkeresések esetén:<br>hivatalos@fityesz.hu</i></p>
 	<div style="text-align: center; margin: 10px;">
 	<!-- Archive added (2.1.6) -->
-    <a href="https://fityesz.hu/archive" target="_self" style="color: #666; font-family: sans-serif; font-size: 11px; text-decoration: underline; letter-spacing: 0.5px; transition: color 0.3s ease;">Fityesz-archívum megtekintése</a>
+  <a href="https://fityesz.hu/archive" target="_self" style="color: #666; font-family: sans-serif; font-size: 11px; text-decoration: underline; letter-spacing: 0.5px; transition: color 0.3s ease;">Fityesz-archívum megtekintése</a>
 </div>
   </div>
 </div>
